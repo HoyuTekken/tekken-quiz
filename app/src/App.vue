@@ -1,47 +1,25 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <v-app>
+        <v-app-bar color="primary" title="Vuetify Test" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+        <v-main>
+            <v-container class="mt-6">
+                <v-card class="pa-4" max-width="400">
+                    <v-card-title>Vuetify works</v-card-title>
 
-  <main>
-    <TheWelcome />
-  </main>
+                    <v-card-text>
+                        Vuetify が正しく適用されています
+                    </v-card-text>
+
+                    <v-card-actions>
+                        <v-btn color="primary" variant="flat">
+                            Test Button
+                        </v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-container>
+        </v-main>
+    </v-app>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<script setup lang="ts"></script>
