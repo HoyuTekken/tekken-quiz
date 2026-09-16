@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY app/package*.json ./
 
 RUN npm install
 
-COPY app/ .
+COPY . .
 
 EXPOSE 5173
 
