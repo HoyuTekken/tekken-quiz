@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 #vs code
 .vscode
+
+#macOS
+.DS_Store
