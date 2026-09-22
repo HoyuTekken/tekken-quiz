@@ -1,9 +1,11 @@
 {
     "title": "関東圏駅名クイズ",
     "category": "駅名クイズ",
+    "subject": "かんたん駅名クイズ",
     "level": "easy",
+    "thumbnail": "/images/thumbnails/test.jpg",
     "icon": "mdi-train",
-    "color": "green-darken-3",
+    "color": "cyan",
     "comingSoon": false,
     "chapters": [
         {
@@ -11,7 +13,7 @@
             "quiz_type": "four_choice",
             "questions": [
                 {
-                    "id": "e1a2b3c4-5d6e-7f8g-9h0i-1j2k3l4m5n6o",
+                    "id": "1",
                     "question": "日本で最初に開業した鉄道の区間はどこでしょう？",
                     "choices": [
                         "新橋 〜 横浜",
@@ -22,7 +24,7 @@
                     "answer": "新橋 〜 横浜"
                 },
                 {
-                    "id": "a7b8c9d0-1e2f-3g4h-5i6j-7k8l9m0n1o2p",
+                    "id": "2",
                     "question": "次のうち、日本最北端にあるJRの駅はどれでしょう？",
                     "choices": ["稚内駅", "網走駅", "旭川駅", "根室駅"],
                     "answer": "稚内駅"

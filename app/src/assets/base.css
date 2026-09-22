@@ -83,4 +83,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Zen Kaku Gothic New', 'Inter', sans-serif;
 }
