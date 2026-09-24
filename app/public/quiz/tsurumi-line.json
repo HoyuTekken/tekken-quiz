@@ -1,382 +1,441 @@
 {
-    "title": "鶴見線路線クイズ",
-    "category": "路線クイズ",
-    "subject": "かんたん路線クイズ",
-    "level": "easy",
-    "thumbnail": "/images/thumbnails/tsurumi-line.jpg",
-    "icon": "mdi-train",
-    "color": "yellow-darken-3",
-    "comingSoon": false,
-    "chapters": [
+  "primary": "tsurumi-easy",
+  "title": "鶴見線路線クイズ",
+  "category": "路線クイズ",
+  "subject": "かんたん路線クイズ",
+  "level": "easy",
+  "thumbnail": "/images/thumbnails/tsurumi-line.jpg",
+  "icon": "mdi-train",
+  "color": "yellow-darken-3",
+  "comingSoon": false,
+  "chapters": [
+    {
+      "chapter": 1,
+      "questions": [
         {
-            "chapter": 1,
-            "questions": [
-                {
-                    "id": "1",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線の路線記号は?",
-                    "choices": ["JY", "JI", "JN", "JO"],
-                    "answer": "JI"
-                },
-                {
-                    "id": "2",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見駅の鶴見線ホームがある場所はどこでしょう？",
-                    "choices": [
-                        "地平の京浜東北線が発着する階",
-                        "西口側の高架上",
-                        "地下深いホーム",
-                        "東口側の地上ホーム"
-                    ],
-                    "answer": "西口側の高架上"
-                },
-                {
-                    "id": "3",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見大学や曹洞宗大本山総持寺入口付近の線路中央にあるものは何でしょう？",
-                    "choices": [
-                        "旧本山駅のホーム遺構",
-                        "古い信号所の跡",
-                        "トンネルの入口",
-                        "保線用の車両基地"
-                    ],
-                    "answer": "旧本山駅のホーム遺構"
-                },
-                {
-                    "id": "4",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "国道駅に到着する直前に跨がない路線や道路はどれでしょう？",
-                    "choices": [
-                        "横須賀線",
-                        "京急本線",
-                        "東北新幹線",
-                        "国道15号（第一京浜）"
-                    ],
-                    "answer": "東北新幹線"
-                },
-                {
-                    "id": "5",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "国道駅についての説明として正しいものはどれでしょう？",
-                    "choices": [
-                        "高架下は戦前の駅開業当時の雰囲気がそのまま残っている",
-                        "日本で最も新しい駅である",
-                        "すべての特急列車が停車する",
-                        "駅舎が完全に近代的なビルに改築されている"
-                    ],
-                    "answer": "高架下は戦前の駅開業当時の雰囲気がそのまま残っている"
-                },
-                {
-                    "id": "6",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見小野駅の近隣にある学校はどれでしょう？",
-                    "choices": [
-                        "横浜市立横浜サイエンスフロンティア高等学校・附属中学校",
-                        "開成中学校・高等学校",
-                        "筑波大学附属駒場中学校・高等学校",
-                        "灘中学校・高等学校"
-                    ],
-                    "answer": "横浜市立横浜サイエンスフロンティア高等学校・附属中学校"
-                },
-                {
-                    "id": "7",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線乗務員が所属し、運用車両が常駐する鶴見線営業所の旧称は何でしょう？",
-                    "choices": [
-                        "弁天橋電車区",
-                        "鶴見機関区",
-                        "浅野車庫",
-                        "扇町客車区"
-                    ],
-                    "answer": "弁天橋電車区"
-                },
-                {
-                    "id": "8",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "弁天橋駅の南側にある工場として記述されていないものはどれでしょう？",
-                    "choices": [
-                        "AGC京浜工場",
-                        "ジャパン マリンユナイテッド横浜事業所鶴見工場",
-                        "トヨタ自動車横浜工場",
-                        "記載されている工場はいずれも弁天橋駅南側にある"
-                    ],
-                    "answer": "トヨタ自動車横浜工場"
-                },
-                {
-                    "id": "9",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "浅野駅は本線とどの一支線の分岐駅でしょう？",
-                    "choices": [
-                        "海芝浦支線",
-                        "大川支線",
-                        "南武支線",
-                        "鶴見川口支線"
-                    ],
-                    "answer": "海芝浦支線"
-                },
-                {
-                    "id": "10",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "浅野駅の3・4番線の相対式ホームに発着する電車はどの方面の電車でしょう？",
-                    "choices": [
-                        "海芝浦方面",
-                        "扇町方面",
-                        "大川方面",
-                        "武蔵白石方面"
-                    ],
-                    "answer": "海芝浦方面"
-                },
-                {
-                    "id": "11",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "浅野駅が最寄り駅となっている事業所はどこでしょう？",
-                    "choices": [
-                        "JFEエンジニアリング鶴見事業所",
-                        "富士電機川崎工場",
-                        "レゾナック川崎事業所",
-                        "三菱重工業横浜製作所"
-                    ],
-                    "answer": "JFEエンジニアリング鶴見事業所"
-                },
-                {
-                    "id": "12",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "JRで最も駅間の短い区間（0.5 km）の一つである区間はどこでしょう？",
-                    "choices": [
-                        "浅野駅 - 安善駅間",
-                        "安善駅 - 武蔵白石駅間",
-                        "鶴見駅 - 国道駅間",
-                        "昭和駅 - 扇町駅間"
-                    ],
-                    "answer": "浅野駅 - 安善駅間"
-                },
-                {
-                    "id": "13",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "安善駅 - 武蔵白石駅間にある運河の鉄橋を越える運河の名前は何でしょう？",
-                    "choices": ["境運河", "旭運河", "京浜運河", "鶴見運河"],
-                    "answer": "境運河"
-                },
-                {
-                    "id": "14",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "武蔵白石駅で1996年（平成8年）に廃止・撤去されたホームはどれでしょう？",
-                    "choices": [
-                        "大川支線用ホーム",
-                        "海芝浦支線用ホーム",
-                        "本線下りホーム",
-                        "貨物専用ホーム"
-                    ],
-                    "answer": "大川支線用ホーム"
-                },
-                {
-                    "id": "15",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "武蔵白石駅の北側にある工場はどこでしょう？",
-                    "choices": [
-                        "富士電機の川崎工場",
-                        "日本鋳造の本社工場",
-                        "JFEスチール渡田地区の工場",
-                        "昭和石油川崎製油所"
-                    ],
-                    "answer": "富士電機の川崎工場"
-                },
-                {
-                    "id": "16",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "浜川崎駅で南武線南武支線の駅舎がある場所はどこでしょう？",
-                    "choices": [
-                        "改札を出て道路を挟んだ反対側",
-                        "鶴見線のホームの真上",
-                        "構内通路で直結している場所",
-                        "地下通路をくぐった先"
-                    ],
-                    "answer": "改札を出て道路を挟んだ反対側"
-                },
-                {
-                    "id": "17",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "浜川崎駅の跨線橋の一般出入口の反対側にあるものは何でしょう？",
-                    "choices": [
-                        "JFEスチールの社員専用出入口",
-                        "富士電機の専用改札",
-                        "一般のバスロータリー",
-                        "貨物駅の事務所入口"
-                    ],
-                    "answer": "JFEスチールの社員専用出入口"
-                },
-                {
-                    "id": "18",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "昭和駅の駅名の由来となった事業所として本文に挙げられていないものはどれでしょう？",
-                    "choices": [
-                        "レゾナック（旧：昭和電工）川崎事業所",
-                        "昭和石油川崎製油所",
-                        "昭和電線ホールディングス",
-                        "記載されている企業はいずれも由来に関わっている"
-                    ],
-                    "answer": "昭和電線ホールディングス"
-                },
-                {
-                    "id": "19",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線の終点である駅はどこでしょう？",
-                    "choices": ["扇町駅", "海芝浦駅", "大川駅", "浜川崎駅"],
-                    "answer": "扇町駅"
-                },
-                {
-                    "id": "20",
-                    "quiz_type": "four_choice",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "扇町駅の旅客駅の先にはどこへ接続する貨物ヤードが広がっているでしょう？",
-                    "choices": [
-                        "三井埠頭",
-                        "三菱倉庫",
-                        "川崎港",
-                        "東京貨物ターミナル"
-                    ],
-                    "answer": "三井埠頭"
-                },
-                {
-                    "id": "21",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線の終点である駅の名前を答えなさい。",
-                    "accept_answers": ["扇町", "扇町駅"],
-                    "explanation": "鶴見線の終点は扇町駅です。"
-                },
-                {
-                    "id": "22",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "本線と海芝浦支線の分岐駅となる駅の名前を答えなさい。",
-                    "accept_answers": ["浅野", "浅野駅"],
-                    "explanation": "浅野駅は本線と海芝浦支線の分岐駅です。"
-                },
-                {
-                    "id": "23",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "JRで最も駅間の短い区間の一つである浅野駅と安善駅の間の距離は何kmでしょう？",
-                    "accept_answers": ["0.5", "0.5km"],
-                    "explanation": "浅野駅 - 安善駅間はJRで最も駅間の短い区間の一つで0.5 kmです。"
-                },
-                {
-                    "id": "24",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "安善駅と武蔵白石駅の間にある運河の名前を答えなさい。",
-                    "accept_answers": ["境運河"],
-                    "explanation": "安善駅 - 武蔵白石駅間には境運河の鉄橋があります。"
-                },
-                {
-                    "id": "25",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "武蔵白石駅で1996年に廃止・撤去された支線のホームは何用ホームでしょう？",
-                    "accept_answers": ["大川支線", "大川支線用"],
-                    "explanation": "武蔵白石駅では大川支線用ホームが1996年に廃止・撤去されました。"
-                },
-                {
-                    "id": "26",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "南武線南武支線との接続駅である駅の名前を答えなさい。",
-                    "accept_answers": ["浜川崎", "浜川崎駅"],
-                    "explanation": "浜川崎駅は南武線南武支線との接続駅です。"
-                },
-                {
-                    "id": "27",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "レゾナック（旧：昭和電工）川崎事業所や昭和石油川崎製油所などの付近にある駅から名を取った駅の名前を答えなさい。",
-                    "accept_answers": ["昭和", "昭和駅"],
-                    "explanation": "昭和駅は付近の事業所名から名付けられました。"
-                },
-                {
-                    "id": "28",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "扇町駅の旅客駅の先にある、三井埠頭へ接続する施設の名前を答えなさい。",
-                    "accept_answers": ["貨物ヤード"],
-                    "explanation": "扇町駅の旅客駅の先には三井埠頭へ接続する貨物ヤードが広がっています。"
-                },
-                {
-                    "id": "29",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "大川支線の終点となる駅の名前を答えなさい。",
-                    "accept_answers": ["大川", "大川駅"],
-                    "explanation": "大川支線の終点は大川駅です。"
-                },
-                {
-                    "id": "30",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "海芝浦支線の終点となる駅の名前を答えなさい。",
-                    "accept_answers": ["海芝浦", "海芝浦駅"],
-                    "explanation": "海芝浦支線の終点は海芝浦駅です。"
-                },
-                {
-                    "id": "31",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線の車両の夜間滞泊を行っている駅の一つで、鶴見駅以外の駅の名前を答えなさい。",
-                    "accept_answers": ["弁天橋", "弁天橋駅"],
-                    "explanation": "車両の夜間滞泊は鶴見駅と弁天橋駅で行っています。"
-                },
-                {
-                    "id": "32",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "海芝浦駅にある東芝の事業所の名前を答えなさい。",
-                    "accept_answers": ["東芝京浜事業所", "京浜事業所"],
-                    "explanation": "海芝浦駅には東芝京浜事業所があります。"
-                },
-                {
-                    "id": "33",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "1996年3月のダイヤ改正で大川支線の車両を置き換えた形式の番号を答えなさい。",
-                    "accept_answers": ["103系", "103"],
-                    "explanation": "大川支線の車両は103系に置き換えられました。"
-                },
-                {
-                    "id": "34",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "鶴見線の全列車で行われている、車内で運賃の収受を行わないワンマン運転の方式を何ワンマンと呼ぶでしょう？",
-                    "accept_answers": ["都市型ワンマン", "都市型"],
-                    "explanation": "鶴見線では全列車で都市型ワンマン運転を行っています。"
-                },
-                {
-                    "id": "35",
-                    "quiz_type": "free_input",
-                    "image": "/images/tsurumi-line.jpg",
-                    "question": "南武線・尻手駅と浜川崎駅間の専用車両の出入りのため、弁天橋駅と尻手駅間に設定されている列車の名前を答えなさい。",
-                    "accept_answers": ["回送列車", "回送"],
-                    "explanation": "弁天橋駅 - 尻手駅間には回送列車が設定されています。"
-                }
-            ]
+          "id": "1",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線の路線記号は?",
+          "choices": [
+            "JY",
+            "JI",
+            "JN",
+            "JO"
+          ],
+          "answer": "JI"
+        },
+        {
+          "id": "2",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見駅の鶴見線ホームがある場所はどこでしょう？",
+          "choices": [
+            "地平の京浜東北線が発着する階",
+            "西口側の高架上",
+            "地下深いホーム",
+            "東口側の地上ホーム"
+          ],
+          "answer": "西口側の高架上"
+        },
+        {
+          "id": "3",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見大学や曹洞宗大本山総持寺入口付近の線路中央にあるものは何でしょう？",
+          "choices": [
+            "旧本山駅のホーム遺構",
+            "古い信号所の跡",
+            "トンネルの入口",
+            "保線用の車両基地"
+          ],
+          "answer": "旧本山駅のホーム遺構"
+        },
+        {
+          "id": "4",
+          "quiz_type": "four_choice",
+          "image": "/images/DSC06543.jpg",
+          "question": "国道駅に到着する直前に跨がない路線や道路はどれでしょう？",
+          "choices": [
+            "横須賀線",
+            "京急本線",
+            "東北新幹線",
+            "国道15号（第一京浜）"
+          ],
+          "answer": "東北新幹線"
+        },
+        {
+          "id": "5",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "国道駅についての説明として正しいものはどれでしょう？",
+          "choices": [
+            "高架下は戦前の駅開業当時の雰囲気がそのまま残っている",
+            "日本で最も新しい駅である",
+            "すべての特急列車が停車する",
+            "駅舎が完全に近代的なビルに改築されている"
+          ],
+          "answer": "高架下は戦前の駅開業当時の雰囲気がそのまま残っている"
+        },
+        {
+          "id": "6",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見小野駅の近隣にある学校はどれでしょう？",
+          "choices": [
+            "横浜市立横浜サイエンスフロンティア高等学校・附属中学校",
+            "開成中学校・高等学校",
+            "筑波大学附属駒場中学校・高等学校",
+            "灘中学校・高等学校"
+          ],
+          "answer": "横浜市立横浜サイエンスフロンティア高等学校・附属中学校"
+        },
+        {
+          "id": "7",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線乗務員が所属し、運用車両が常駐する鶴見線営業所の旧称は何でしょう？",
+          "choices": [
+            "弁天橋電車区",
+            "鶴見機関区",
+            "浅野車庫",
+            "扇町客車区"
+          ],
+          "answer": "弁天橋電車区"
+        },
+        {
+          "id": "8",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "弁天橋駅の南側にある工場として記述されていないものはどれでしょう？",
+          "choices": [
+            "AGC京浜工場",
+            "ジャパン マリンユナイテッド横浜事業所鶴見工場",
+            "トヨタ自動車横浜工場",
+            "記載されている工場はいずれも弁天橋駅南側にある"
+          ],
+          "answer": "トヨタ自動車横浜工場"
+        },
+        {
+          "id": "9",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "浅野駅は本線とどの一支線の分岐駅でしょう？",
+          "choices": [
+            "海芝浦支線",
+            "大川支線",
+            "南武支線",
+            "鶴見川口支線"
+          ],
+          "answer": "海芝浦支線"
+        },
+        {
+          "id": "10",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "浅野駅の3・4番線の相対式ホームに発着する電車はどの方面の電車でしょう？",
+          "choices": [
+            "海芝浦方面",
+            "扇町方面",
+            "大川方面",
+            "武蔵白石方面"
+          ],
+          "answer": "海芝浦方面"
+        },
+        {
+          "id": "11",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "浅野駅が最寄り駅となっている事業所はどこでしょう？",
+          "choices": [
+            "JFEエンジニアリング鶴見事業所",
+            "富士電機川崎工場",
+            "レゾナック川崎事業所",
+            "三菱重工業横浜製作所"
+          ],
+          "answer": "JFEエンジニアリング鶴見事業所"
+        },
+        {
+          "id": "12",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "JRで最も駅間の短い区間（0.5 km）の一つである区間はどこでしょう？",
+          "choices": [
+            "浅野駅 - 安善駅間",
+            "安善駅 - 武蔵白石駅間",
+            "鶴見駅 - 国道駅間",
+            "昭和駅 - 扇町駅間"
+          ],
+          "answer": "浅野駅 - 安善駅間"
+        },
+        {
+          "id": "13",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "安善駅 - 武蔵白石駅間にある運河の鉄橋を越える運河の名前は何でしょう？",
+          "choices": [
+            "境運河",
+            "旭運河",
+            "京浜運河",
+            "鶴見運河"
+          ],
+          "answer": "境運河"
+        },
+        {
+          "id": "14",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "武蔵白石駅で1996年（平成8年）に廃止・撤去されたホームはどれでしょう？",
+          "choices": [
+            "大川支線用ホーム",
+            "海芝浦支線用ホーム",
+            "本線下りホーム",
+            "貨物専用ホーム"
+          ],
+          "answer": "大川支線用ホーム"
+        },
+        {
+          "id": "15",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "武蔵白石駅の北側にある工場はどこでしょう？",
+          "choices": [
+            "富士電機の川崎工場",
+            "日本鋳造の本社工場",
+            "JFEスチール渡田地区の工場",
+            "昭和石油川崎製油所"
+          ],
+          "answer": "富士電機の川崎工場"
+        },
+        {
+          "id": "16",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "浜川崎駅で南武線南武支線の駅舎がある場所はどこでしょう？",
+          "choices": [
+            "改札を出て道路を挟んだ反対側",
+            "鶴見線のホームの真上",
+            "構内通路で直結している場所",
+            "地下通路をくぐった先"
+          ],
+          "answer": "改札を出て道路を挟んだ反対側"
+        },
+        {
+          "id": "17",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "浜川崎駅の跨線橋の一般出入口の反対側にあるものは何でしょう？",
+          "choices": [
+            "JFEスチールの社員専用出入口",
+            "富士電機の専用改札",
+            "一般のバスロータリー",
+            "貨物駅の事務所入口"
+          ],
+          "answer": "JFEスチールの社員専用出入口"
+        },
+        {
+          "id": "18",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "昭和駅の駅名の由来となった事業所として本文に挙げられていないものはどれでしょう？",
+          "choices": [
+            "レゾナック（旧：昭和電工）川崎事業所",
+            "昭和石油川崎製油所",
+            "昭和電線ホールディングス",
+            "記載されている企業はいずれも由来に関わっている"
+          ],
+          "answer": "昭和電線ホールディングス"
+        },
+        {
+          "id": "19",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線の終点である駅はどこでしょう？",
+          "choices": [
+            "扇町駅",
+            "海芝浦駅",
+            "大川駅",
+            "浜川崎駅"
+          ],
+          "answer": "扇町駅"
+        },
+        {
+          "id": "20",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "扇町駅の旅客駅の先にはどこへ接続する貨物ヤードが広がっているでしょう？",
+          "choices": [
+            "三井埠頭",
+            "三菱倉庫",
+            "川崎港",
+            "東京貨物ターミナル"
+          ],
+          "answer": "三井埠頭"
+        },
+        {
+          "id": "21",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線の終点である駅の名前を答えなさい。",
+          "accept_answers": [
+            "扇町",
+            "扇町駅"
+          ],
+          "explanation": "鶴見線の終点は扇町駅です。"
+        },
+        {
+          "id": "22",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "本線と海芝浦支線の分岐駅となる駅の名前を答えなさい。",
+          "accept_answers": [
+            "浅野",
+            "浅野駅"
+          ],
+          "explanation": "浅野駅は本線と海芝浦支線の分岐駅です。"
+        },
+        {
+          "id": "23",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "JRで最も駅間の短い区間の一つである浅野駅と安善駅の間の距離は何kmでしょう？",
+          "accept_answers": [
+            "0.5",
+            "0.5km"
+          ],
+          "explanation": "浅野駅 - 安善駅間はJRで最も駅間の短い区間の一つで0.5 kmです。"
+        },
+        {
+          "id": "24",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "安善駅と武蔵白石駅の間にある運河の名前を答えなさい。",
+          "accept_answers": [
+            "境運河"
+          ],
+          "explanation": "安善駅 - 武蔵白石駅間には境運河の鉄橋があります。"
+        },
+        {
+          "id": "25",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "武蔵白石駅で1996年に廃止・撤去された支線のホームは何用ホームでしょう？",
+          "accept_answers": [
+            "大川支線",
+            "大川支線用"
+          ],
+          "explanation": "武蔵白石駅では大川支線用ホームが1996年に廃止・撤去されました。"
+        },
+        {
+          "id": "26",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "南武線南武支線との接続駅である駅の名前を答えなさい。",
+          "accept_answers": [
+            "浜川崎",
+            "浜川崎駅"
+          ],
+          "explanation": "浜川崎駅は南武線南武支線との接続駅です。"
+        },
+        {
+          "id": "27",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "レゾナック（旧：昭和電工）川崎事業所や昭和石油川崎製油所などの付近にある駅から名を取った駅の名前を答えなさい。",
+          "accept_answers": [
+            "昭和",
+            "昭和駅"
+          ],
+          "explanation": "昭和駅は付近の事業所名から名付けられました。"
+        },
+        {
+          "id": "28",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "扇町駅の旅客駅の先にある、三井埠頭へ接続する施設の名前を答えなさい。",
+          "accept_answers": [
+            "貨物ヤード"
+          ],
+          "explanation": "扇町駅の旅客駅の先には三井埠頭へ接続する貨物ヤードが広がっています。"
+        },
+        {
+          "id": "29",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "大川支線の終点となる駅の名前を答えなさい。",
+          "accept_answers": [
+            "大川",
+            "大川駅"
+          ],
+          "explanation": "大川支線の終点は大川駅です。"
+        },
+        {
+          "id": "30",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "海芝浦支線の終点となる駅の名前を答えなさい。",
+          "accept_answers": [
+            "海芝浦",
+            "海芝浦駅"
+          ],
+          "explanation": "海芝浦支線の終点は海芝浦駅です。"
+        },
+        {
+          "id": "31",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線の車両の夜間滞泊を行っている駅の一つで、鶴見駅以外の駅の名前を答えなさい。",
+          "accept_answers": [
+            "弁天橋",
+            "弁天橋駅"
+          ],
+          "explanation": "車両の夜間滞泊は鶴見駅と弁天橋駅で行っています。"
+        },
+        {
+          "id": "32",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "海芝浦駅にある東芝の事業所の名前を答えなさい。",
+          "accept_answers": [
+            "東芝京浜事業所",
+            "京浜事業所"
+          ],
+          "explanation": "海芝浦駅には東芝京浜事業所があります。"
+        },
+        {
+          "id": "33",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "1996年3月のダイヤ改正で大川支線の車両を置き換えた形式の番号を答えなさい。",
+          "accept_answers": [
+            "103系",
+            "103"
+          ],
+          "explanation": "大川支線の車両は103系に置き換えられました。"
+        },
+        {
+          "id": "34",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線の全列車で行われている、車内で運賃の収受を行わないワンマン運転の方式を何ワンマンと呼ぶでしょう？",
+          "accept_answers": [
+            "都市型ワンマン",
+            "都市型"
+          ],
+          "explanation": "鶴見線では全列車で都市型ワンマン運転を行っています。"
+        },
+        {
+          "id": "35",
+          "quiz_type": "free_input",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "南武線・尻手駅と浜川崎駅間の専用車両の出入りのため、弁天橋駅と尻手駅間に設定されている列車の名前を答えなさい。",
+          "accept_answers": [
+            "回送列車",
+            "回送"
+          ],
+          "explanation": "弁天橋駅 - 尻手駅間には回送列車が設定されています。"
         }
-    ]
+      ]
+    }
+  ]
 }
