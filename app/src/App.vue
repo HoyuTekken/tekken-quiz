@@ -22,11 +22,14 @@
                 />
             </header>
 
-            <v-main class="flex-grow-1 d-flex main-view">
+            <v-main
+                class="flex-grow-1 d-flex main-view"
+                :class="{ 'play-view': isPlay }"
+            >
                 <router-view />
             </v-main>
 
-            <footer>
+            <footer v-if="!isPlay">
                 <TheFooter />
             </footer>
         </v-app>
@@ -46,12 +49,23 @@ const route = useRoute();
 const theme = useTheme();
 const drawer = ref(false);
 
-const isNotHome = computed(() => ![""].includes(route.path.replace(/^\/|\/$/g, "")));
-const isMenu = computed(() => ["menu"].includes(route.path.replace(/^\/|\/$/g, "")));
-const isNotMenu = computed(() => !["menu"].includes(route.path.replace(/^\/|\/$/g, "")));
+const isNotHome = computed(
+    () => ![""].includes(route.path.replace(/^\/|\/$/g, "")),
+);
+const isMenu = computed(() =>
+    ["menu"].includes(route.path.replace(/^\/|\/$/g, "")),
+);
+const isNotMenu = computed(
+    () => !["menu"].includes(route.path.replace(/^\/|\/$/g, "")),
+);
+
+const isPlay = computed(() =>
+    route.path.replace(/^\/|\/$/g, "").startsWith("play"),
+);
 
 function toggleTheme(targetValue?: boolean) {
-    const nextTheme = (targetValue ?? !theme.global.current.value.dark) ? "dark" : "light";
+    const nextTheme =
+        (targetValue ?? !theme.global.current.value.dark) ? "dark" : "light";
     theme.global.name.value = nextTheme;
     localStorage.setItem("user-theme", nextTheme);
 }
@@ -67,7 +81,8 @@ let mediaQuery: MediaQueryList | null = null;
 onMounted(() => {
     const savedTheme = localStorage.getItem("user-theme");
     mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    theme.global.name.value = savedTheme || (mediaQuery.matches ? "dark" : "light");
+    theme.global.name.value =
+        savedTheme || (mediaQuery.matches ? "dark" : "light");
     mediaQuery.addEventListener("change", updateThemeFromSystem);
 });
 
@@ -80,7 +95,7 @@ onUnmounted(() => {
 
 <style lang="css" scoped>
 .main-view {
-    width: 90%;
+    width: 97%;
     max-width: 1100px;
     margin: auto;
 }

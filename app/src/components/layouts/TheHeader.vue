@@ -12,7 +12,7 @@
                 <v-img
                     :src="logo"
                     height="40"
-                    width="80"
+                    width="90"
                     alt="logo"
                     class="mr-2"
                 />

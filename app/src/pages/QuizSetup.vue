@@ -99,21 +99,19 @@ const textbookId = computed(() => (route.params.quizname as string) || "");
 const textbookName = ref<string>("読み込み中...");
 
 const selectedChapter = ref<number | null>(null);
-const selectedMode = ref<string>("mixed"); // デフォルトを混合などに設定
+const selectedMode = ref<string>("mixed");
 const selectedLimit = ref<number>(10);
 const quizData = ref<any>(null);
 
 const chapterOptions = ref<{ label: string; value: number }[]>([]);
 const isLoading = ref<boolean>(false);
 
-// Update mode options to match new JSON specifications (four_choice, free_input, or mixed)
 const modeOptions = [
     { label: "すべての形式", value: "mixed" },
     { label: "4択クイズのみ", value: "four_choice" },
     { label: "自由記述のみ", value: "free_input" },
 ];
 
-// Calculate maximum questions available for the selected chapter
 const maxQuestions = computed(() => {
     if (!quizData.value || selectedChapter.value === null) return 20;
 
@@ -121,38 +119,22 @@ const maxQuestions = computed(() => {
         (ch: any) => Number(ch.chapter) === selectedChapter.value,
     );
 
-    return chapterObj?.questions?.length || 20;
-});
+    if (!chapterObj || !chapterObj.questions) return 20;
 
-const limitOptions = computed(() => {
-    if (!quizData.value || selectedChapter.value === null) {
-        return [{ label: "全問", value: 1000 }];
+    const questions = chapterObj.questions;
+
+    if (selectedMode.value === "four_choice") {
+        return questions.filter((q: any) => q.quiz_type === "four_choice")
+            .length;
+    } else if (selectedMode.value === "free_input") {
+        return questions.filter((q: any) => q.quiz_type === "free_input")
+            .length;
     }
 
-    const chapterObj = quizData.value.chapters.find(
-        (ch: any) => Number(ch.chapter) === selectedChapter.value,
-    );
-
-    const totalQuestions = chapterObj?.questions?.length || 0;
-
-    const options = [];
-    const steps = [5, 10, 15, 20];
-
-    for (const step of steps) {
-        if (step < totalQuestions) {
-            options.push({ label: `${step}問`, value: step });
-        }
-    }
-
-    options.push({
-        label: `全問 (${totalQuestions}問)`,
-        value: totalQuestions,
-    });
-
-    return options;
+    return questions.length;
 });
 
-watch(selectedChapter, () => {
+watch([selectedChapter, selectedMode], () => {
     selectedLimit.value = maxQuestions.value;
 });
 

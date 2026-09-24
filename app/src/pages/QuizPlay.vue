@@ -1,5 +1,8 @@
 <template>
-    <v-container fluid class="quiz-container d-flex align-center px-4 px-sm-6">
+    <v-container
+        fluid
+        class="quiz-container d-flex align-start px-4 px-sm-6 pt-6"
+    >
         <v-progress-linear
             :model-value="quizStore.progress"
             color="primary"
@@ -54,10 +57,10 @@
                     <div
                         class="text-overline text-primary font-weight-bold mb-2"
                     >
-                        QUIZ COMPLETED
+                        クイズ終了
                     </div>
                     <h2 class="result-title font-weight-black mb-4">
-                        Score Result
+                        スコア結果
                     </h2>
 
                     <div class="score-display mb-4">
@@ -93,7 +96,7 @@
                             @click="retryQuiz"
                             prepend-icon="mdi-refresh"
                         >
-                            Retry
+                            もう一度
                         </v-btn>
                     </v-col>
                     <v-col cols="12" sm="6" class="choice-col Vue-Fix">
@@ -104,7 +107,7 @@
                             :to="`/setup/${textbookId}`"
                             prepend-icon="mdi-arrow-left"
                         >
-                            Change Settings
+                            クイズ設定を変える
                         </v-btn>
                     </v-col>
                 </v-row>
@@ -112,15 +115,12 @@
         </div>
     </v-container>
 </template>
-
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { useQuizStore } from "../stores/QuizStore";
 
-// import mode components
 import QuizPlayChoice from "../components/QuizPlayChoice.vue";
-import QuizPlayFlashcard from "../components/QuizPlayFlashcard.vue";
 import QuizPlayInput from "../components/QuizPlayInput.vue";
 
 const route = useRoute();
@@ -132,13 +132,11 @@ const rawQuizData = ref<any>(null);
 const textbookId = computed(() => (route.params.textname as string) || "");
 const chapter = computed(() => Number(route.query.chapter) || 1);
 const limit = computed(() => Number(route.query.limit) || 10);
-const mode = computed(() => (route.query.mode as string) || "choice");
+const mode = computed(() => (route.query.mode as string) || "mixed");
 
 const currentModeComponent = computed(() => {
-    if (mode.value === "flashcard") {
-        return QuizPlayFlashcard;
-    }
-    if (mode.value === "input") {
+    const qType = quizStore.currentQuestion?.quiz_type;
+    if (qType === "free_input") {
         return QuizPlayInput;
     }
     return QuizPlayChoice;
@@ -159,12 +157,12 @@ onMounted(async () => {
 
 function startSession() {
     if (!rawQuizData.value) return;
-
-    if (mode.value === "input") {
-        quizStore.initInputQuiz(rawQuizData.value, chapter.value, limit.value);
-    } else {
-        quizStore.initQuiz(rawQuizData.value, chapter.value, limit.value);
-    }
+    quizStore.initQuiz(
+        rawQuizData.value,
+        chapter.value,
+        limit.value,
+        mode.value,
+    );
 }
 
 function retryQuiz() {
@@ -173,9 +171,9 @@ function retryQuiz() {
 
 function getFeedbackMessage(score: number, total: number) {
     const rate = score / total;
-    if (rate === 1) return "Perfect! You're a Genius!";
-    if (rate >= 0.7) return "Great job! Keep it up!";
-    return "Nice try! Let's review and challenge again!";
+    if (rate === 1) return "パーフェクト。社長レベルかな";
+    if (rate >= 0.7) return "素晴らしい。その調子でかんばりましょう。";
+    return "その調子で頑張りましょう。";
 }
 </script>
 
@@ -193,6 +191,7 @@ function getFeedbackMessage(score: number, total: number) {
                 48px
             )
     );
+
     overflow-y: auto;
     background-color: rgb(var(--v-theme-background));
 }
@@ -237,7 +236,7 @@ function getFeedbackMessage(score: number, total: number) {
 
 @media (min-width: 600px) {
     .quiz-container {
-        padding-top: 40px !important;
+        padding-top: 60px !important;
         padding-bottom: 40px !important;
     }
     .choice-col {

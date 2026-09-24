@@ -8,6 +8,7 @@ export type QuizType = "four_choice" | "free_input";
 export interface QuestionItem {
     id: string;
     quiz_type: QuizType;
+    image?: string;
     question: string;
     choices?: string[];
     answer?: string;
@@ -62,6 +63,7 @@ export const useQuizStore = defineStore("quiz", () => {
         rawData: QuizRawData,
         targetChapter: number,
         limit: number = 0,
+        mode: string = "mixed",
     ) {
         const targetData = rawData.chapters?.find(
             (c) => Number(c.chapter) === targetChapter,
@@ -76,8 +78,18 @@ export const useQuizStore = defineStore("quiz", () => {
             return;
         }
 
-        // 問題のシャッフル（必要に応じて）
-        let finalData = shuffleArray(targetData.questions);
+        let filteredQuestions = targetData.questions;
+        if (mode === "four_choice") {
+            filteredQuestions = targetData.questions.filter(
+                (q) => q.quiz_type === "four_choice",
+            );
+        } else if (mode === "free_input") {
+            filteredQuestions = targetData.questions.filter(
+                (q) => q.quiz_type === "free_input",
+            );
+        }
+
+        let finalData = shuffleArray(filteredQuestions);
         if (limit > 0) {
             finalData = finalData.slice(0, limit);
         }
