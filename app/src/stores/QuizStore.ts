@@ -59,12 +59,24 @@ export const useQuizStore = defineStore("quiz", () => {
         return arr;
     }
 
+    const formatUrl = (path?: string) => {
+        if (!path) return undefined;
+        if (path.startsWith("/tekken-quiz")) {
+            return path;
+        }
+        return `/tekken-quiz${path.startsWith("/") ? "" : "/"}${path}`;
+    };
+
     function initQuiz(
         rawData: QuizRawData,
         targetChapter: number,
         limit: number = 0,
         mode: string = "mixed",
     ) {
+        if (rawData.thumbnail) {
+            rawData.thumbnail = formatUrl(rawData.thumbnail) || "";
+        }
+
         const targetData = rawData.chapters?.find(
             (c) => Number(c.chapter) === targetChapter,
         );
@@ -78,13 +90,18 @@ export const useQuizStore = defineStore("quiz", () => {
             return;
         }
 
-        let filteredQuestions = targetData.questions;
+        const processedQuestions = targetData.questions.map((q) => ({
+            ...q,
+            image: formatUrl(q.image),
+        }));
+
+        let filteredQuestions = processedQuestions;
         if (mode === "four_choice") {
-            filteredQuestions = targetData.questions.filter(
+            filteredQuestions = processedQuestions.filter(
                 (q) => q.quiz_type === "four_choice",
             );
         } else if (mode === "free_input") {
-            filteredQuestions = targetData.questions.filter(
+            filteredQuestions = processedQuestions.filter(
                 (q) => q.quiz_type === "free_input",
             );
         }

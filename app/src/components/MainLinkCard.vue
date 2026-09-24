@@ -1,4 +1,4 @@
-<!-- components/MainLinkCard.vue -->
+<!-- src/components/MainLinkCard.vue -->
 <template>
     <v-card
         :to="to"
@@ -13,31 +13,29 @@
     >
         <div class="card-media-container position-relative">
             <v-img
-                v-if="thumbnail"
-                :src="thumbnail"
+                v-if="resolvedThumbnail"
+                :src="resolvedThumbnail"
                 alt=""
                 cover
                 class="w-100 h-100"
             ></v-img>
 
-            <div
-                v-else
-                class="w-100 h-100 d-flex align-center justify-center"
-            >
+            <div v-else class="w-100 h-100 d-flex align-center justify-center">
                 <v-icon :icon="icon" size="48"></v-icon>
             </div>
 
             <div v-if="thumbnail" class="thumbnail-fade-overlay"></div>
         </div>
 
-        <div class="card-content pa-4 d-flex flex-column justify-center flex-grow-1 position-relative">
-            <div class="text-subtitle-1 font-weight-bold line-height-tight title-text">
+        <div
+            class="card-content pa-4 d-flex flex-column justify-center flex-grow-1 position-relative"
+        >
+            <div
+                class="text-subtitle-1 font-weight-bold line-height-tight title-text"
+            >
                 {{ label }}
             </div>
-            <div
-                v-if="subject"
-                class="text-caption mt-1 subject-text"
-            >
+            <div v-if="subject" class="text-caption mt-1 subject-text">
                 {{ subject }}
             </div>
         </div>
@@ -67,10 +65,28 @@ const props = withDefaults(defineProps<Props>(), {
     subject: "",
 });
 
+const resolvedThumbnail = computed(() => {
+    if (!props.thumbnail) return undefined;
+    if (props.thumbnail.startsWith("/tekken-quiz")) {
+        return props.thumbnail;
+    }
+    return `/tekken-quiz${props.thumbnail.startsWith("/") ? "" : "/"}${props.thumbnail}`;
+});
 
 const cardThemeClass = computed(() => {
-    const lightColors = ["surface", "white", "grey-lighten-4", "grey-lighten-5", "background"];
-    if (lightColors.includes(props.color) || props.color.startsWith("#f") || props.color.startsWith("#e") || props.color.startsWith("#fff")) {
+    const lightColors = [
+        "surface",
+        "white",
+        "grey-lighten-4",
+        "grey-lighten-5",
+        "background",
+    ];
+    if (
+        lightColors.includes(props.color) ||
+        props.color.startsWith("#f") ||
+        props.color.startsWith("#e") ||
+        props.color.startsWith("#fff")
+    ) {
         return "card-theme-light";
     }
     return "card-theme-dark";
@@ -82,8 +98,10 @@ const cardThemeClass = computed(() => {
     border-radius: 16px;
     overflow: hidden;
     height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
@@ -100,7 +118,7 @@ const cardThemeClass = computed(() => {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px; 
+    height: 40px;
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
     pointer-events: none;
 }

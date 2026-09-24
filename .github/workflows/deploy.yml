@@ -23,10 +23,28 @@ concurrency:
 jobs:
     build:
         runs-on: ubuntu-latest
+        outputs:
+            deploy_type: ${{ steps.context.outputs.deploy_type }}
+            deploy_ref: ${{ steps.context.outputs.deploy_ref }}
+            deploy_reason: ${{ steps.context.outputs.deploy_reason }}
         defaults:
             run:
                 working-directory: ./app
         steps:
+            - name: Set deploy context
+              id: context
+              shell: bash
+              run: |
+                  if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+                      echo "deploy_type=manual" >> $GITHUB_OUTPUT
+                      echo "deploy_ref=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+                      echo "deploy_reason=${{ github.event.inputs.deploy_reason }}" >> $GITHUB_OUTPUT
+                  else
+                      echo "deploy_type=push" >> $GITHUB_OUTPUT
+                      echo "deploy_ref=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+                      echo "deploy_reason=push to main branch" >> $GITHUB_OUTPUT
+                  fi
+
             - name: Checkout
               uses: actions/checkout@v4
 
@@ -62,3 +80,27 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
+
+            - name: Notify ntfy (deploy success)
+              if: success()
+              run: |
+                  curl -H "Title: Tekken Quiz Deploy Success" \
+                       -H "Priority: default" \
+                       -H "Tags: white_check_mark" \
+                       -d "Type: ${{ needs.build.outputs.deploy_type }}
+                  Ref: ${{ needs.build.outputs.deploy_ref }}
+                  Reason: ${{ needs.build.outputs.deploy_reason }}
+                  Repo: ${{ github.repository }}
+                  Actor: ${{ github.actor }}" \
+                  https://ntfy.sh/github-hoyutekken-tekkenquiz-deploy
+
+            - name: Notify ntfy (deploy failure)
+              if: always() && failure()
+              run: |
+                  curl -H "Title: Tekken Quiz Deploy Failed" \
+                       -H "Priority: high" \
+                       -H "Tags: x" \
+                       -d "Repository: ${{ github.repository }}
+                  Workflow: ${{ github.workflow }}
+                  Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+                  https://ntfy.sh/github-hoyutekken-tekkenquiz-deploy
