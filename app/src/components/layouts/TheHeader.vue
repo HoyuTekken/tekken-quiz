@@ -9,7 +9,13 @@
     >
         <v-container class="d-flex align-center pa-0" style="max-width: 95%">
             <v-app-bar-title class="cursor-pointer" @click="$router.push('/')">
-                <v-img :src="logo" height="40" width="80" alt="logo" class="mr-2" />
+                <v-img
+                    :src="logo"
+                    height="40"
+                    width="80"
+                    alt="logo"
+                    class="mr-2"
+                />
             </v-app-bar-title>
 
             <v-spacer></v-spacer>
@@ -22,7 +28,9 @@
                 class="mr-1 d-none d-md-flex"
             >
                 <v-icon icon="mdi-home"></v-icon>
-                <v-tooltip activator="parent" location="bottom">Menu</v-tooltip>
+                <v-tooltip activator="parent" location="bottom"
+                    >メニュー</v-tooltip
+                >
             </v-btn>
 
             <div class="d-none d-md-flex align-center">
@@ -35,14 +43,22 @@
                     class="mr-1"
                 >
                     <v-icon icon="mdi-plus"></v-icon>
-                    <v-tooltip activator="parent" location="bottom">Add Quiz</v-tooltip>
+                    <v-tooltip activator="parent" location="bottom"
+                        >クイズ追加</v-tooltip
+                    >
                 </v-btn>
 
                 <v-btn icon @click="$emit('toggle-theme')" variant="text">
                     <v-icon
-                        :icon="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
+                        :icon="
+                            isDark
+                                ? 'mdi-white-balance-sunny'
+                                : 'mdi-weather-night'
+                        "
                     />
-                    <v-tooltip activator="parent" location="bottom">Appearance</v-tooltip>
+                    <v-tooltip activator="parent" location="bottom"
+                        >表示切り替え</v-tooltip
+                    >
                 </v-btn>
 
                 <v-btn
@@ -53,7 +69,9 @@
                     class="mr-1"
                 >
                     <v-icon icon="mdi-github"></v-icon>
-                    <v-tooltip activator="parent" location="bottom">GitHub</v-tooltip>
+                    <v-tooltip activator="parent" location="bottom"
+                        >GitHub</v-tooltip
+                    >
                 </v-btn>
             </div>
 

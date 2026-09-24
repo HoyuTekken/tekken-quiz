@@ -135,7 +135,7 @@ const quizModules = import.meta.glob<{
     category?: string;
     subject: string;
     icon: string;
-    thumbnail?: string; // ⭐ ここを追加
+    thumbnail?: string;
     color?: string;
     comingSoon?: boolean;
 }>("../../public/quiz/*.json", { eager: true });
@@ -151,7 +151,7 @@ for (const path in quizModules) {
         title: mod.title,
         subject: mod.subject,
         icon: mod.icon || "mdi-beaker",
-        thumbnail: mod.thumbnail, // ⭐ ここを追加
+        thumbnail: mod.thumbnail,
         link: `/setup/${fileName}`,
         color: mod.color || "primary",
         comingSoon: mod.comingSoon || false,

@@ -1,30 +1,38 @@
 <!-- src/components/layouts/TheDrawer.vue -->
 <template>
-    <v-navigation-drawer
-        location="right"
-        temporary
-        width="280"
-    >
+    <v-navigation-drawer location="right" temporary width="280">
         <v-divider></v-divider>
         <v-list nav>
             <v-list-item v-if="isNotHome && isNotMenu" link to="/menu">
                 <template v-slot:prepend>
                     <v-icon icon="mdi-home"></v-icon>
                 </template>
-                <v-list-item-title class="font-weight-bold">Menu</v-list-item-title>
+                <v-list-item-title class="font-weight-bold"
+                    >メニュー</v-list-item-title
+                >
             </v-list-item>
 
             <v-divider v-if="isNotHome && isNotMenu" class="my-2"></v-divider>
 
             <v-list-item>
                 <template v-slot:prepend>
-                    <v-icon :icon="isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'" />
+                    <v-icon
+                        :icon="
+                            isDark
+                                ? 'mdi-white-balance-sunny'
+                                : 'mdi-weather-night'
+                        "
+                    />
                 </template>
-                <v-list-item-title class="font-weight-bold">Dark Mode</v-list-item-title>
+                <v-list-item-title class="font-weight-bold"
+                    >ダークモード</v-list-item-title
+                >
                 <template v-slot:append>
                     <v-switch
                         :model-value="isDark"
-                        @update:model-value="(val) => $emit('toggle-theme', val)"
+                        @update:model-value="
+                            (val) => $emit('toggle-theme', val)
+                        "
                         color="primary"
                         hide-details
                         density="compact"
@@ -43,16 +51,24 @@
                 <template v-slot:prepend>
                     <v-icon icon="mdi-plus"></v-icon>
                 </template>
-                <v-list-item-title class="font-weight-bold">Add Quiz</v-list-item-title>
+                <v-list-item-title class="font-weight-bold"
+                    >クイズ追加</v-list-item-title
+                >
             </v-list-item>
 
             <v-divider class="my-2"></v-divider>
 
-            <v-list-item link href="https://github.com/hoyutekken/tekken-quiz" target="_blank">
+            <v-list-item
+                link
+                href="https://github.com/hoyutekken/tekken-quiz"
+                target="_blank"
+            >
                 <template v-slot:prepend>
                     <v-icon icon="mdi-github"></v-icon>
                 </template>
-                <v-list-item-title class="font-weight-bold">GitHub</v-list-item-title>
+                <v-list-item-title class="font-weight-bold"
+                    >GitHub</v-list-item-title
+                >
             </v-list-item>
             <v-divider class="my-2"></v-divider>
         </v-list>

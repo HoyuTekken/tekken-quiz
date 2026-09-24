@@ -1,19 +1,19 @@
 {
-    "title": "吾妻線路線クイズ",
+    "title": "鶴見線路線クイズ",
     "category": "路線クイズ",
     "subject": "かんたん路線クイズ",
     "level": "easy",
-    "thumbnail": "/images/thumbnails/test.jpg",
+    "thumbnail": "/images/thumbnails/test2.jpg",
     "icon": "mdi-train",
-    "color": "indigo-darken-3",
+    "color": "yellow-darken-3",
     "comingSoon": false,
     "chapters": [
         {
             "chapter": 1,
-            "quiz_type": "four_choice",
             "questions": [
                 {
                     "id": "1",
+                    "quiz_type": "four_choice",
                     "question": "日本で最初に開業した鉄道の区間はどこでしょう？",
                     "choices": [
                         "新橋 〜 横浜",
@@ -21,13 +21,15 @@
                         "大阪 〜 神戸",
                         "京都 〜 伏見"
                     ],
-                    "answer": "新橋 〜 横浜"
+                    "answer": "新橋 〜 横浜",
+                    "explanation": "正解は新橋 〜 横浜です。"
                 },
                 {
                     "id": "2",
-                    "question": "次のうち、日本最北端にあるJRの駅はどれでしょう？",
-                    "choices": ["稚内駅", "網走駅", "旭川駅", "根室駅"],
-                    "answer": "稚内駅"
+                    "quiz_type": "free_input",
+                    "question": "鶴見線の終点である駅の名前を漢字で答えなさい。",
+                    "accept_answers": ["扇町", "扇町駅"],
+                    "explanation": "鶴見線の終点は扇町駅です。"
                 }
             ]
         }
