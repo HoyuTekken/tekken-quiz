@@ -3,7 +3,7 @@
     "category": "路線クイズ",
     "subject": "かんたん路線クイズ",
     "level": "easy",
-    "thumbnail": "/tekken-quiz/images/thumbnails/test.jpg",
+    "thumbnail": "/tekken-quiz/images/thumbnails/tsurumi-line.jpg",
     "icon": "mdi-train",
     "color": "yellow-darken-3",
     "comingSoon": false,
@@ -14,7 +14,7 @@
                 {
                     "id": "1",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線の路線記号は?",
                     "choices": ["JY", "JI", "JN", "JO"],
                     "answer": "JI"
@@ -22,7 +22,7 @@
                 {
                     "id": "2",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見駅の鶴見線ホームがある場所はどこでしょう？",
                     "choices": [
                         "地平の京浜東北線が発着する階",
@@ -35,7 +35,7 @@
                 {
                     "id": "3",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見大学や曹洞宗大本山総持寺入口付近の線路中央にあるものは何でしょう？",
                     "choices": [
                         "旧本山駅のホーム遺構",
@@ -48,7 +48,7 @@
                 {
                     "id": "4",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "国道駅に到着する直前に跨がない路線や道路はどれでしょう？",
                     "choices": [
                         "横須賀線",
@@ -61,7 +61,7 @@
                 {
                     "id": "5",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "国道駅についての説明として正しいものはどれでしょう？",
                     "choices": [
                         "高架下は戦前の駅開業当時の雰囲気がそのまま残っている",
@@ -74,7 +74,7 @@
                 {
                     "id": "6",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見小野駅の近隣にある学校はどれでしょう？",
                     "choices": [
                         "横浜市立横浜サイエンスフロンティア高等学校・附属中学校",
@@ -87,7 +87,7 @@
                 {
                     "id": "7",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線乗務員が所属し、運用車両が常駐する鶴見線営業所の旧称は何でしょう？",
                     "choices": [
                         "弁天橋電車区",
@@ -100,7 +100,7 @@
                 {
                     "id": "8",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "弁天橋駅の南側にある工場として記述されていないものはどれでしょう？",
                     "choices": [
                         "AGC京浜工場",
@@ -113,7 +113,7 @@
                 {
                     "id": "9",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "浅野駅は本線とどの一支線の分岐駅でしょう？",
                     "choices": [
                         "海芝浦支線",
@@ -126,7 +126,7 @@
                 {
                     "id": "10",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "浅野駅の3・4番線の相対式ホームに発着する電車はどの方面の電車でしょう？",
                     "choices": [
                         "海芝浦方面",
@@ -139,7 +139,7 @@
                 {
                     "id": "11",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "浅野駅が最寄り駅となっている事業所はどこでしょう？",
                     "choices": [
                         "JFEエンジニアリング鶴見事業所",
@@ -152,7 +152,7 @@
                 {
                     "id": "12",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "JRで最も駅間の短い区間（0.5 km）の一つである区間はどこでしょう？",
                     "choices": [
                         "浅野駅 - 安善駅間",
@@ -165,7 +165,7 @@
                 {
                     "id": "13",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "安善駅 - 武蔵白石駅間にある運河の鉄橋を越える運河の名前は何でしょう？",
                     "choices": ["境運河", "旭運河", "京浜運河", "鶴見運河"],
                     "answer": "境運河"
@@ -173,7 +173,7 @@
                 {
                     "id": "14",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "武蔵白石駅で1996年（平成8年）に廃止・撤去されたホームはどれでしょう？",
                     "choices": [
                         "大川支線用ホーム",
@@ -186,7 +186,7 @@
                 {
                     "id": "15",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "武蔵白石駅の北側にある工場はどこでしょう？",
                     "choices": [
                         "富士電機の川崎工場",
@@ -199,7 +199,7 @@
                 {
                     "id": "16",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "浜川崎駅で南武線南武支線の駅舎がある場所はどこでしょう？",
                     "choices": [
                         "改札を出て道路を挟んだ反対側",
@@ -212,7 +212,7 @@
                 {
                     "id": "17",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "浜川崎駅の跨線橋の一般出入口の反対側にあるものは何でしょう？",
                     "choices": [
                         "JFEスチールの社員専用出入口",
@@ -225,7 +225,7 @@
                 {
                     "id": "18",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "昭和駅の駅名の由来となった事業所として本文に挙げられていないものはどれでしょう？",
                     "choices": [
                         "レゾナック（旧：昭和電工）川崎事業所",
@@ -238,7 +238,7 @@
                 {
                     "id": "19",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線の終点である駅はどこでしょう？",
                     "choices": ["扇町駅", "海芝浦駅", "大川駅", "浜川崎駅"],
                     "answer": "扇町駅"
@@ -246,7 +246,7 @@
                 {
                     "id": "20",
                     "quiz_type": "four_choice",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "扇町駅の旅客駅の先にはどこへ接続する貨物ヤードが広がっているでしょう？",
                     "choices": [
                         "三井埠頭",
@@ -259,7 +259,7 @@
                 {
                     "id": "21",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線の終点である駅の名前を答えなさい。",
                     "accept_answers": ["扇町", "扇町駅"],
                     "explanation": "鶴見線の終点は扇町駅です。"
@@ -267,7 +267,7 @@
                 {
                     "id": "22",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "本線と海芝浦支線の分岐駅となる駅の名前を答えなさい。",
                     "accept_answers": ["浅野", "浅野駅"],
                     "explanation": "浅野駅は本線と海芝浦支線の分岐駅です。"
@@ -275,7 +275,7 @@
                 {
                     "id": "23",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "JRで最も駅間の短い区間の一つである浅野駅と安善駅の間の距離は何kmでしょう？",
                     "accept_answers": ["0.5", "0.5km"],
                     "explanation": "浅野駅 - 安善駅間はJRで最も駅間の短い区間の一つで0.5 kmです。"
@@ -283,7 +283,7 @@
                 {
                     "id": "24",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "安善駅と武蔵白石駅の間にある運河の名前を答えなさい。",
                     "accept_answers": ["境運河"],
                     "explanation": "安善駅 - 武蔵白石駅間には境運河の鉄橋があります。"
@@ -291,7 +291,7 @@
                 {
                     "id": "25",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "武蔵白石駅で1996年に廃止・撤去された支線のホームは何用ホームでしょう？",
                     "accept_answers": ["大川支線", "大川支線用"],
                     "explanation": "武蔵白石駅では大川支線用ホームが1996年に廃止・撤去されました。"
@@ -299,7 +299,7 @@
                 {
                     "id": "26",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "南武線南武支線との接続駅である駅の名前を答えなさい。",
                     "accept_answers": ["浜川崎", "浜川崎駅"],
                     "explanation": "浜川崎駅は南武線南武支線との接続駅です。"
@@ -307,7 +307,7 @@
                 {
                     "id": "27",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "レゾナック（旧：昭和電工）川崎事業所や昭和石油川崎製油所などの付近にある駅から名を取った駅の名前を答えなさい。",
                     "accept_answers": ["昭和", "昭和駅"],
                     "explanation": "昭和駅は付近の事業所名から名付けられました。"
@@ -315,7 +315,7 @@
                 {
                     "id": "28",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "扇町駅の旅客駅の先にある、三井埠頭へ接続する施設の名前を答えなさい。",
                     "accept_answers": ["貨物ヤード"],
                     "explanation": "扇町駅の旅客駅の先には三井埠頭へ接続する貨物ヤードが広がっています。"
@@ -323,7 +323,7 @@
                 {
                     "id": "29",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "大川支線の終点となる駅の名前を答えなさい。",
                     "accept_answers": ["大川", "大川駅"],
                     "explanation": "大川支線の終点は大川駅です。"
@@ -331,7 +331,7 @@
                 {
                     "id": "30",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "海芝浦支線の終点となる駅の名前を答えなさい。",
                     "accept_answers": ["海芝浦", "海芝浦駅"],
                     "explanation": "海芝浦支線の終点は海芝浦駅です。"
@@ -339,7 +339,7 @@
                 {
                     "id": "31",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線の車両の夜間滞泊を行っている駅の一つで、鶴見駅以外の駅の名前を答えなさい。",
                     "accept_answers": ["弁天橋", "弁天橋駅"],
                     "explanation": "車両の夜間滞泊は鶴見駅と弁天橋駅で行っています。"
@@ -347,7 +347,7 @@
                 {
                     "id": "32",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "海芝浦駅にある東芝の事業所の名前を答えなさい。",
                     "accept_answers": ["東芝京浜事業所", "京浜事業所"],
                     "explanation": "海芝浦駅には東芝京浜事業所があります。"
@@ -355,7 +355,7 @@
                 {
                     "id": "33",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "1996年3月のダイヤ改正で大川支線の車両を置き換えた形式の番号を答えなさい。",
                     "accept_answers": ["103系", "103"],
                     "explanation": "大川支線の車両は103系に置き換えられました。"
@@ -363,7 +363,7 @@
                 {
                     "id": "34",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "鶴見線の全列車で行われている、車内で運賃の収受を行わないワンマン運転の方式を何ワンマンと呼ぶでしょう？",
                     "accept_answers": ["都市型ワンマン", "都市型"],
                     "explanation": "鶴見線では全列車で都市型ワンマン運転を行っています。"
@@ -371,7 +371,7 @@
                 {
                     "id": "35",
                     "quiz_type": "free_input",
-                    "image": "/tekken-quiz/images/test.jpg",
+                    "image": "/tekken-quiz/images/tsurumi-line.jpg",
                     "question": "南武線・尻手駅と浜川崎駅間の専用車両の出入りのため、弁天橋駅と尻手駅間に設定されている列車の名前を答えなさい。",
                     "accept_answers": ["回送列車", "回送"],
                     "explanation": "弁天橋駅 - 尻手駅間には回送列車が設定されています。"
