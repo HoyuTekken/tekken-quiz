@@ -1,83 +1,73 @@
 content:
-- name: quiz_files
-      label: クイズ一覧
-      type: collection
-      path: app/public/quiz
-      format: json
-      filename: "{primary}.json"
-      identifier_field: primary # 識別子として指定しておくと安心です
-      view:
-          fields:
-              - title
-              - category
-              - level
-              - primary
-      fields:
-          # 👇 ここに primary フィールドを追加します
-          - name: primary
-            label: ファイル名ID (半角英数字・例: tsurumi-easy)
-            type: string
-            required: true
-          - name: title
-            label: クイズタイトル
-            type: string
-          - name: category
-            label: カテゴリ
-            type: string
-          - name: subject
-            label: サブジェクト（サブタイトル等）
-            type: string
-          - name: level
-            label: 难易度 (easy, normal, hard 等)
-            type: string
-          - name: thumbnail
-            label: サムネイル画像
-            type: image
-          - name: icon
-            label: アイコン (例: mdi-train)
-            type: string
-          - name: color
-            label: テーマカラー (例: yellow-darken-3)
-            type: string
-          - name: comingSoon
-            label: 準備中 (Coming Soon)
-            type: boolean
-          - name: chapters
-            label: チャプター一覧
+  - name: quiz_files
+    label: クイズ一覧
+    folder: app/public/quiz
+    extension: json
+    fields:
+      - name: primary
+        label: ファイル名ID (半角英数字・例: tsurumi-easy)
+        type: string
+        required: true
+      - name: title
+        label: クイズタイトル
+        type: string
+      - name: category
+        label: カテゴリ
+        type: string
+      - name: subject
+        label: サブジェクト（サブタイトル等）
+        type: string
+      - name: level
+        label: 難易度 (easy, normal, hard 等)
+        type: string
+      - name: thumbnail
+        label: サムネイル画像
+        type: image
+      - name: icon
+        label: アイコン (例: mdi-train)
+        type: string
+      - name: color
+        label: テーマカラー (例: yellow-darken-3)
+        type: string
+      - name: comingSoon
+        label: 準備中 (Coming Soon)
+        type: boolean
+      - name: chapters
+        label: チャプター一覧
+        type: object
+        list: true
+        fields:
+          - name: chapter
+            label: チャプター番号
+            type: number
+          - name: questions
+            label: 問題リスト
             type: object
             list: true
             fields:
-                - name: chapter
-                  label: チャプター番号
-                  type: number
-                - name: questions
-                  label: 問題リスト
-                  type: object
-                  list: true
-                  fields:
-                      - name: id
-                        label: 問題ID (UUIDなど)
-                        type: string
-                      - name: quiz_type
-                        label: クイズ形式 (four_choice または free_input)
-                        type: string
-                      - name: image
-                        label: 問題の画像
-                        type: image
-                      - name: question
-                        label: 問題文
-                        type: string
-                      - name: choices
-                        label: 選択肢 (4択の場合)
-                        type: string
-                        list: true
-                      - name: answer
-                        label: 正解 (4択の場合の答え)
-                        type: string
-                      - name: accept_answers
-                        label: 許容する正解 (自由記述の場合の答えの候補)
-                        type: string
-                        list: true
-                      - name: explanation
-                        label: 解説
-                        type: string
+              - name: id
+                label: 問題ID
+                type: string
+              - name: quiz_type
+                label: クイズ形式 (four_choice または free_input)
+                type: string
+              - name: image
+                label: 問題の画像
+                type: image
+              - name: question
+                label: 問題文
+                type: string
+              - name: choices
+                label: 選択肢 (4択の場合)
+                type: string
+                list: true
+              - name: answer
+                label: 正解 (4択の場合の答え)
+                type: string
+              - name: accept_answers
+                label: 許容する正解 (自由記述の場合)
+                type: string
+                list: true
+              - name: explanation
+                label: 解説
+                type: string
