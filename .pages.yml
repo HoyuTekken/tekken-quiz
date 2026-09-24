@@ -40,16 +40,14 @@ content:
             type: boolean
           - name: chapters
             label: チャプター一覧
-            type: object
-            list: true
+            type: list
             fields:
                 - name: chapter
                   label: チャプター番号
                   type: number
                 - name: questions
                   label: 問題リスト
-                  type: object
-                  list: true
+                  type: list
                   fields:
                       - name: id
                         label: 問題ID (UUIDなど)
@@ -67,15 +65,15 @@ content:
                         type: string
                       - name: choices
                         label: 選択肢 (4択の場合)
-                        type: string
-                        list: true
+                        type: list
+                        field: { type: string }
                       - name: answer
                         label: 正解 (4択の場合の答え)
                         type: string
                       - name: accept_answers
                         label: 許容する正解 (自由記述の場合の答えの候補)
-                        type: string
-                        list: true
+                        type: list
+                        field: { type: string }
                       - name: explanation
                         label: 解説
                         type: string
