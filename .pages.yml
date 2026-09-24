@@ -27,8 +27,6 @@ content:
           - name: thumbnail
             label: サムネイル画像
             type: image
-            media_library:
-                folder: /app/public/images/thumbnails
           - name: icon
             label: アイコン (例: mdi-train)
             type: string
@@ -41,14 +39,14 @@ content:
           - name: chapters
             label: チャプター一覧
             type: list
-            fields:
+            items:
                 - name: chapter
                   label: チャプター番号
                   type: number
                 - name: questions
                   label: 問題リスト
                   type: list
-                  fields:
+                  items:
                       - name: id
                         label: 問題ID (UUIDなど)
                         type: string
@@ -58,22 +56,22 @@ content:
                       - name: image
                         label: 問題の画像
                         type: image
-                        media_library:
-                            folder: /app/public/images
                       - name: question
                         label: 問題文
                         type: string
                       - name: choices
                         label: 選択肢 (4択の場合)
                         type: list
-                        field: { type: string }
+                        items:
+                            type: string
                       - name: answer
                         label: 正解 (4択の場合の答え)
                         type: string
                       - name: accept_answers
                         label: 許容する正解 (自由記述の場合の答えの候補)
                         type: list
-                        field: { type: string }
+                        items:
+                            type: string
                       - name: explanation
                         label: 解説
                         type: string
