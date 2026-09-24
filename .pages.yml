@@ -14,6 +14,8 @@ content:
           fields:
               - title
               - category
+              - level
+              - primary
       fields:
           - name: primary
             label: File ID (e.g. tsurumi-easy)
@@ -82,30 +84,3 @@ content:
                       - name: explanation
                         label: Explanation
                         type: string
-
-    - name: site_info
-      label: サイトお知らせ管理
-      type: file
-      file: app/public/information/tekken-quiz-info.json
-      format: json
-      fields:
-          - name: items
-            label: お知らせ一覧
-            type: object
-            list: true
-            fields:
-                - name: id
-                  label: ID (例: 202609250000)
-                  type: number
-                - name: title
-                  label: タイトル
-                  type: string
-                - name: information
-                  label: 概要
-                  type: string
-                - name: information_detail
-                  label: 詳細
-                  type: string
-                - name: info_date
-                  label: 日付 (例: 2026-09-25-00:00)
-                  type: string
