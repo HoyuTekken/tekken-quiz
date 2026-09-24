@@ -9,6 +9,7 @@ import VueDevTools from "vite-plugin-vue-devtools";
 import vuetify from "vite-plugin-vuetify";
 
 export default defineConfig({
+    base: "/tekken-quiz/",
     plugins: [VueDevTools(), vue(), vuetify({ autoImport: true })],
     resolve: {
         alias: {

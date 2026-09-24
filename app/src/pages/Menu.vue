@@ -39,7 +39,7 @@
                             ref="searchFieldRef"
                             v-model="searchQuery"
                             prepend-inner-icon="mdi-magnify"
-                            label="Search Textbook…"
+                            label="クイズを探す…"
                             variant="outlined"
                             density="compact"
                             hide-details
@@ -70,6 +70,7 @@
                                 : item.subject
                         "
                         :icon="item.icon"
+                        :thumbnail="item.thumbnail"
                         :to="item.comingSoon ? '' : item.link"
                         :color="item.color"
                         class="w-100"
@@ -101,6 +102,7 @@
                                 : item.subject
                         "
                         :icon="item.icon"
+                        :thumbnail="item.thumbnail"
                         :to="item.comingSoon ? '' : item.link"
                         :color="item.color"
                         class="w-100"
@@ -121,6 +123,7 @@ interface ButtonItem {
     title: string;
     subject: string;
     icon: string;
+    thumbnail?: string;
     link: string;
     color?: string;
     comingSoon?: boolean;
@@ -132,6 +135,7 @@ const quizModules = import.meta.glob<{
     category?: string;
     subject: string;
     icon: string;
+    thumbnail?: string;
     color?: string;
     comingSoon?: boolean;
 }>("../../public/quiz/*.json", { eager: true });
@@ -147,6 +151,7 @@ for (const path in quizModules) {
         title: mod.title,
         subject: mod.subject,
         icon: mod.icon || "mdi-beaker",
+        thumbnail: mod.thumbnail,
         link: `/setup/${fileName}`,
         color: mod.color || "primary",
         comingSoon: mod.comingSoon || false,

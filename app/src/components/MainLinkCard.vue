@@ -6,20 +6,37 @@
         :target="target"
         :color="color"
         variant="flat"
-        class="mainlink-btn-card pa-4 w-100 d-flex align-center cursor-pointer"
+        elevation="0"
+        class="mainlink-btn-card w-100 d-flex flex-column cursor-pointer"
+        :class="cardThemeClass"
         v-ripple
     >
-        <v-avatar size="48" class="icon-avatar mr-4">
-            <v-icon :icon="icon" size="28" color="white"></v-icon>
-        </v-avatar>
+        <div class="card-media-container position-relative">
+            <v-img
+                v-if="thumbnail"
+                :src="thumbnail"
+                alt=""
+                cover
+                class="w-100 h-100"
+            ></v-img>
 
-        <div class="text-container text-white">
-            <div class="text-h6 font-weight-bold line-height-tight">
+            <div
+                v-else
+                class="w-100 h-100 d-flex align-center justify-center"
+            >
+                <v-icon :icon="icon" size="48"></v-icon>
+            </div>
+
+            <div v-if="thumbnail" class="thumbnail-fade-overlay"></div>
+        </div>
+
+        <div class="card-content pa-4 d-flex flex-column justify-center flex-grow-1 position-relative">
+            <div class="text-subtitle-1 font-weight-bold line-height-tight title-text">
                 {{ label }}
             </div>
             <div
                 v-if="subject"
-                class="text-caption text-grey-lighten-2 mt-1 subject-text"
+                class="text-caption mt-1 subject-text"
             >
                 {{ subject }}
             </div>
@@ -28,11 +45,13 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import type { IconValue } from "vuetify";
 
 interface Props {
     label: string;
-    icon: IconValue;
+    icon?: IconValue;
+    thumbnail?: string;
     to?: string;
     href?: string;
     target?: string;
@@ -40,32 +59,61 @@ interface Props {
     subject?: string;
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
     color: "primary",
+    icon: "mdi-image",
+    thumbnail: undefined,
     target: undefined,
     subject: "",
+});
+
+
+const cardThemeClass = computed(() => {
+    const lightColors = ["surface", "white", "grey-lighten-4", "grey-lighten-5", "background"];
+    if (lightColors.includes(props.color) || props.color.startsWith("#f") || props.color.startsWith("#e") || props.color.startsWith("#fff")) {
+        return "card-theme-light";
+    }
+    return "card-theme-dark";
 });
 </script>
 
 <style lang="scss" scoped>
 .mainlink-btn-card {
-    border-radius: 12px;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    min-height: 82px;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
     }
 }
 
-.icon-avatar {
-    background: rgba(255, 255, 255, 0.2);
+.card-media-container {
+    height: 150px;
+    width: 100%;
+}
+
+.thumbnail-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; 
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
+    pointer-events: none;
 }
 
 .line-height-tight {
-    line-height: 1.2;
+    line-height: 1.4;
+}
+
+.title-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .subject-text {
@@ -73,5 +121,29 @@ withDefaults(defineProps<Props>(), {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
+}
+
+.card-theme-dark {
+    .title-text {
+        color: rgba(255, 255, 255, 0.95);
+    }
+    .subject-text {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .v-icon {
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.card-theme-light {
+    .title-text {
+        color: rgba(0, 0, 0, 0.87);
+    }
+    .subject-text {
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .v-icon {
+        color: rgba(0, 0, 0, 0.7);
+    }
 }
 </style>
