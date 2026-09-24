@@ -1,7 +1,7 @@
 media:
     input: app/public/images
     output: /images
-    extensions: [png, jpg, jpeg, webp]
+    extensions: [png, jpg, jpeg, JPG, JPEG, webp, WEBP]
 
 content:
     - name: quiz_files
