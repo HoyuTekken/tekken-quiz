@@ -24,6 +24,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../pages/QuizSetup.vue"),
         meta: { title: "鉄研クイズ | クイズ設定" },
     },
+    {
+        path: "/play/:textname",
+        name: "play",
+        component: () => import("../pages/QuizPlay.vue"),
+        meta: { title: "Squizee | Playing Quiz" },
+    },
 ];
 
 export const router = createRouter({
