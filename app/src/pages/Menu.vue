@@ -1,4 +1,4 @@
-<!-- pages/Menu.vue -->
+<!-- src/pages/Menu.vue -->
 <template>
     <v-container fluid>
         <h1 class="main-title">メニュー</h1>
@@ -143,6 +143,14 @@ const quizModules = import.meta.glob<{
 const textbookContents = ref<ButtonItem[]>([]);
 const extraContents = ref<ButtonItem[]>([]);
 
+const formatThumbnailUrl = (thumbnail?: string) => {
+    if (!thumbnail) return undefined;
+    if (thumbnail.startsWith("/tekken-quiz")) {
+        return thumbnail;
+    }
+    return `/tekken-quiz${thumbnail.startsWith("/") ? "" : "/"}${thumbnail}`;
+};
+
 for (const path in quizModules) {
     const mod = quizModules[path];
     const fileName = path.split("/").pop()?.replace(".json", "") || "";
@@ -151,7 +159,7 @@ for (const path in quizModules) {
         title: mod.title,
         subject: mod.subject,
         icon: mod.icon || "mdi-beaker",
-        thumbnail: mod.thumbnail,
+        thumbnail: formatThumbnailUrl(mod.thumbnail), // ← ここでパスを補正
         link: `/setup/${fileName}`,
         color: mod.color || "primary",
         comingSoon: mod.comingSoon || false,

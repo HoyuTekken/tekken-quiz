@@ -1,4 +1,4 @@
-<!-- components/QuizPlayChoice.vue -->
+<!-- src/components/QuizPlayChoice.vue -->
 <template>
     <div class="choice-mode-wrapper">
         <v-card

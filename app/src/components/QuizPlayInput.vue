@@ -1,4 +1,4 @@
-<!-- components/QuizPlayInput.vue -->
+<!-- src/components/QuizPlayInput.vue -->
 <template>
     <div class="input-mode-wrapper">
         <v-card
