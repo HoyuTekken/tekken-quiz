@@ -27,9 +27,6 @@ jobs:
             deploy_type: ${{ steps.context.outputs.deploy_type }}
             deploy_ref: ${{ steps.context.outputs.deploy_ref }}
             deploy_reason: ${{ steps.context.outputs.deploy_reason }}
-        defaults:
-            run:
-                working-directory: ./app
         steps:
             - name: Set deploy context
               id: context
@@ -55,9 +52,11 @@ jobs:
 
             - name: Install dependencies
               run: npm install
+              working-directory: ./app
 
             - name: Build
               run: npx vite build
+              working-directory: ./app
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
