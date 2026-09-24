@@ -1,10 +1,11 @@
 content:
-    - name: quiz_files
+- name: quiz_files
       label: クイズ一覧
       type: collection
       path: app/public/quiz
       format: json
       filename: "{primary}.json"
+      identifier_field: primary # 識別子として指定しておくと安心です
       view:
           fields:
               - title
@@ -12,6 +13,11 @@ content:
               - level
               - primary
       fields:
+          # 👇 ここに primary フィールドを追加します
+          - name: primary
+            label: ファイル名ID (半角英数字・例: tsurumi-easy)
+            type: string
+            required: true
           - name: title
             label: クイズタイトル
             type: string
@@ -22,7 +28,7 @@ content:
             label: サブジェクト（サブタイトル等）
             type: string
           - name: level
-            label: 難易度 (easy, normal, hard 等)
+            label: 难易度 (easy, normal, hard 等)
             type: string
           - name: thumbnail
             label: サムネイル画像
@@ -38,15 +44,17 @@ content:
             type: boolean
           - name: chapters
             label: チャプター一覧
-            type: list
-            items:
+            type: object
+            list: true
+            fields:
                 - name: chapter
                   label: チャプター番号
                   type: number
                 - name: questions
                   label: 問題リスト
-                  type: list
-                  items:
+                  type: object
+                  list: true
+                  fields:
                       - name: id
                         label: 問題ID (UUIDなど)
                         type: string
@@ -61,17 +69,15 @@ content:
                         type: string
                       - name: choices
                         label: 選択肢 (4択の場合)
-                        type: list
-                        items:
-                            type: string
+                        type: string
+                        list: true
                       - name: answer
                         label: 正解 (4択の場合の答え)
                         type: string
                       - name: accept_answers
                         label: 許容する正解 (自由記述の場合の答えの候補)
-                        type: list
-                        items:
-                            type: string
+                        type: string
+                        list: true
                       - name: explanation
                         label: 解説
                         type: string
