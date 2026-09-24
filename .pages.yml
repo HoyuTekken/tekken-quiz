@@ -14,8 +14,6 @@ content:
           fields:
               - title
               - category
-              - level
-              - primary
       fields:
           - name: primary
             label: File ID (e.g. tsurumi-easy)
