@@ -7,16 +7,14 @@
             <div class="main-title">
                 <h1>鉄研クイズ</h1>
                 <h2>朋優学院高等学校<br />鉄道研究部</h2>
-                <h3>鉄道研究部員が作った簡単なクイズです</h3>
+                <h3>鉄道研究部員が作った鉄道クイズ</h3>
                 <v-btn
                     variant="outlined"
                     class="code-style-btn px-10"
                     size="x-large"
                     to="/menu"
                 >
-                    <span class="btn-text font-weight-bold"
-                        >クイズを解いてみる</span
-                    >
+                    <span class="btn-text font-weight-bold">さっそく解く</span>
                     <v-icon
                         end
                         icon="mdi-chevron-right"
@@ -104,8 +102,8 @@
                         PC不要。Pages CMSやGitHubで簡単編集
                     </h3>
                     <p class="text-body-1 text-medium-emphasis leading-relaxed">
-                        クイズデータの管理はとても簡単です。Pages
-                        CMSの直感的なビジュアルインターフェースを使うか、GitHub上で直接ファイルを編集して、いつでもどこでもスマートフォンから問題のアップデートが可能です。
+                        簡単にクイズを管理することができます。Pages
+                        CMSを使うか、GitHub上で直接ファイルを編集して、いつでもどこでもスマートフォンから問題のアップデートが可能です。
                     </p>
                 </div>
                 <div class="step-image-wrapper">
@@ -126,8 +124,8 @@
                         GitHub Pagesを活用し、ホスティング費用は完全無料
                     </h3>
                     <p class="text-body-1 text-medium-emphasis leading-relaxed">
-                        維持費を一切かけずにプロジェクトを運営できます。GitHub
-                        Pagesを利用することで、サーバー代を一切かけずに、クイズプラットフォームを安全かつ安定して公開できます。
+                        維持費用は一切かかりません。GitHub
+                        Pagesを利用することで、サーバー代を一切かけずに、鉄研クイズを公開しています。
                     </p>
                 </div>
                 <div class="step-image-wrapper">
@@ -148,7 +146,7 @@
                         クリーンで直感的、余計な要素のないデザイン
                     </h3>
                     <p class="text-body-1 text-medium-emphasis leading-relaxed">
-                        「少ないほうが豊かである」という思想のもと設計されています。鉄研クイズは、学習体験に集中できる美しくすっきりとしたユーザーインターフェースを提供し、誰もが親しみやすい環境を実現しています。
+                        できるだけシンプルなデザインで作りました。鉄研クイズは、できるだけクイズそのものに集中できるシンプルなデザインで、誰もが親しみやすいクイズを目指しました。
                     </p>
                 </div>
                 <div class="step-image-wrapper">
@@ -236,9 +234,9 @@
 import { ref, onMounted } from "vue";
 import logoimage from "@/assets/logo.svg";
 
-import step1Image from "@/assets/step1.jpg";
-import step2Image from "@/assets/step2.jpg";
-import step3Image from "@/assets/step3.jpg";
+import step1Image from "@/assets/step1.png";
+import step2Image from "@/assets/step2.png";
+import step3Image from "@/assets/step3.png";
 
 // Type Definition
 export interface NoticeLink {

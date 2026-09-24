@@ -71,8 +71,8 @@
                 >
                     {{
                         quizStore.currentIndex + 1 === quizStore.totalQuestions
-                            ? "Finish"
-                            : "Next Question"
+                            ? "終わる"
+                            : "次の問題へ"
                     }}
                 </v-btn>
             </v-slide-y-transition>

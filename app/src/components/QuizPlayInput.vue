@@ -26,7 +26,7 @@
         <div v-if="quizStore.selectedAnswer === null" class="input-form-area">
             <v-text-field
                 v-model="userInput"
-                label="Type your answer..."
+                label="回答を入力..."
                 variant="outlined"
                 clearable
                 autofocus
@@ -43,7 +43,7 @@
                 @click="submitAnswer"
                 :disabled="!userInput.trim()"
             >
-                Submit Answer
+                回答する
             </v-btn>
         </div>
 
@@ -111,8 +111,8 @@
             >
                 {{
                     quizStore.currentIndex + 1 === quizStore.totalQuestions
-                        ? "Finish"
-                        : "Next Question"
+                        ? "終わる"
+                        : "次の問題へ"
                 }}
             </v-btn>
         </div>
