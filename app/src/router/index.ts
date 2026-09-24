@@ -33,7 +33,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 export const router = createRouter({
-    history: createWebHistory("/"),
+    history: createWebHistory("/tekken-quiz/"),
     routes,
     scrollBehavior: (to, from, savedPosition) => savedPosition || { top: 0 },
 });

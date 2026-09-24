@@ -144,7 +144,9 @@ const currentModeComponent = computed(() => {
 
 onMounted(async () => {
     try {
-        const response = await fetch(`/quiz/${textbookId.value}.json`);
+        const response = await fetch(
+            `${import.meta.env.BASE_URL}/quiz/${textbookId.value}.json`,
+        );
         if (!response.ok) throw new Error("Failed to load quiz data");
         rawQuizData.value = await response.json();
         startSession();

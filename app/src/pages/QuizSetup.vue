@@ -150,7 +150,9 @@ watch(
 
         isLoading.value = true;
         try {
-            const response = await fetch(`/quiz/${newId}.json`);
+            const response = await fetch(
+                `${import.meta.env.BASE_URL}/quiz/${newId}.json`,
+            );
 
             if (!response.ok) throw new Error("Network response was not ok");
 

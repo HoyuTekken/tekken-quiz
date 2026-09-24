@@ -258,7 +258,9 @@ const error = ref(false);
 
 onMounted(async () => {
     try {
-        const res = await fetch(`/information/squizee-info.json`);
+        const res = await fetch(
+            `${import.meta.env.BASE_URL}information/tekken-quiz-info.json`,
+        );
 
         if (!res.ok) throw new Error("fetch failed");
         notices.value = await res.json();
