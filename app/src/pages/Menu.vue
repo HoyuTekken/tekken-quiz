@@ -3,7 +3,7 @@
     <v-container fluid>
         <h1 class="main-title">メニュー</h1>
 
-        <!-- Textbook section-->
+        <!-- Line Quiz section-->
         <div class="textbook-section mb-10">
             <div
                 class="d-flex justify-space-between align-center position-relative"
@@ -80,7 +80,7 @@
             </v-row>
         </div>
 
-        <!-- Extra section-->
+        <!-- Station Quiz section-->
         <div class="extra-section mb-10">
             <h2 class="sub-title text-medium-emphasis">
                 駅名クイズ<v-divider :thickness="2"></v-divider>
@@ -159,13 +159,13 @@ for (const path in quizModules) {
         title: mod.title,
         subject: mod.subject,
         icon: mod.icon || "mdi-beaker",
-        thumbnail: formatThumbnailUrl(mod.thumbnail), // ← ここでパスを補正
+        thumbnail: formatThumbnailUrl(mod.thumbnail),
         link: `/setup/${fileName}`,
         color: mod.color || "primary",
         comingSoon: mod.comingSoon || false,
     };
 
-    if (mod.category === "extra") {
+    if (mod.category === "駅名クイズ") {
         extraContents.value.push(item);
     } else {
         textbookContents.value.push(item);
