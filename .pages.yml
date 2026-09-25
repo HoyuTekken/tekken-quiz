@@ -1,7 +1,7 @@
 media:
     input: app/public/images
     output: /images
-    extensions: [png, jpg, jpeg, JPG, JPEG, webp, WEBP]
+    extensions: [png, jpg, jpeg, webp]
 
 content:
     - name: quiz_files
@@ -14,8 +14,6 @@ content:
           fields:
               - title
               - category
-              - level
-              - primary
       fields:
           - name: primary
             label: File ID (e.g. tsurumi-easy)
@@ -59,28 +57,28 @@ content:
                   list: true
                   fields:
                       - name: id
-                        label: UUID / ID
+                        label: ID　(For Both Types)
                         type: string
                       - name: quiz_type
-                        label: Quiz Type (four_choice or free_input)
+                        label: Quiz Type (four_choice or free_input only)
                         type: string
                       - name: image
-                        label: Question Image
+                        label: Question Image (For Both Types)
                         type: image
                       - name: question
-                        label: Question Text
+                        label: Question Text (For Both Types)
                         type: string
                       - name: choices
                         label: Choices (for 4-choice)
                         type: string
                         list: true
                       - name: answer
-                        label: Answer
+                        label: Answer (for 4-choice)
                         type: string
                       - name: accept_answers
                         label: Accept Answers (for free input)
                         type: string
                         list: true
                       - name: explanation
-                        label: Explanation
+                        label: Explanation (For Both Types)
                         type: string
