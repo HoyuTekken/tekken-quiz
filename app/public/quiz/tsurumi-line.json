@@ -434,6 +434,20 @@
             "回送"
           ],
           "explanation": "弁天橋駅 - 尻手駅間には回送列車が設定されています。"
+        },
+        {
+          "id": "36",
+          "quiz_type": "four_choice",
+          "image": "/images/tsurumi-line.jpg",
+          "question": "鶴見線で2026年現在使われている車両はこの中でどれか",
+          "choices": [
+            "E233系",
+            "E231系",
+            "E131系",
+            "E3系"
+          ],
+          "answer": "E131系",
+          "explanation": "2026年現在鶴見線で利用されている一般車両はE131系です."
         }
       ]
     }
