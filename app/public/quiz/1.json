@@ -1,6 +1,6 @@
 {
   "primary": "ekimei-1-easy",
-  "title": "駅名クイズ1",
+  "title": "駅名クイズ１",
   "category": "駅名クイズ",
   "subject": "駅名クイズかんたん",
   "level": "easy",
@@ -10,6 +10,7 @@
   "comingSoon": false,
   "chapters": [
     {
+      "chapter": 1,
       "questions": [
         {
           "id": "1",
@@ -65,6 +66,28 @@
             "空港第2ビル"
           ],
           "explanation": "写真の駅は空港第2ビル駅です。"
+        },
+        {
+          "id": "6",
+          "quiz_type": "free_input",
+          "image": "/images/q6.png",
+          "question": "この駅は?",
+          "accept_answers": [
+            "大宮駅",
+            "大宮"
+          ],
+          "explanation": "写真の駅は大宮駅です。"
+        },
+        {
+          "id": "7",
+          "quiz_type": "free_input",
+          "image": "/images/q7.png",
+          "question": "この駅は?",
+          "accept_answers": [
+            "中野駅",
+            "中野"
+          ],
+          "explanation": "この写真の駅は中野駅です。"
         }
       ]
     }
