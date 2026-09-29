@@ -32,7 +32,7 @@
                     "id": "3",
                     "quiz_type": "free_input",
                     "image": "/images/q3.png",
-                    "question": "写真の駅は?",
+                    "question": "この駅は?",
                     "accept_answers": ["大船駅", "大船"],
                     "explanation": "写真の駅は大船駅です。"
                 },

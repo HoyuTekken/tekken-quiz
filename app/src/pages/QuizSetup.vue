@@ -48,23 +48,35 @@
                     ></v-select>
 
                     <div class="mb-6 px-2">
-                        <div class="text-caption text-medium-emphasis mb-1">
-                            問題数:
-                            {{
-                                selectedLimit === maxQuestions
-                                    ? `全問 (${maxQuestions}問)`
-                                    : `${selectedLimit}問`
-                            }}
-                        </div>
-                        <v-slider
-                            v-model="selectedLimit"
-                            :min="5"
-                            :max="maxQuestions"
-                            :step="1"
-                            thumb-label
-                            color="primary"
-                            hide-details
-                        ></v-slider>
+                        <template v-if="maxQuestions > 0">
+                            <div class="text-caption text-medium-emphasis mb-1">
+                                問題数:
+                                {{
+                                    selectedLimit === maxQuestions
+                                        ? `全問 (${maxQuestions}問)`
+                                        : `${selectedLimit}問`
+                                }}
+                            </div>
+                            <v-slider
+                                v-model="selectedLimit"
+                                :min="Math.min(5, maxQuestions)"
+                                :max="maxQuestions"
+                                :step="1"
+                                thumb-label
+                                color="primary"
+                                hide-details
+                            ></v-slider>
+                        </template>
+
+                        <v-alert
+                            v-else
+                            type="warning"
+                            variant="tonal"
+                            density="compact"
+                            class="text-body-2"
+                        >
+                            指定された問題条件のクイズがありません。条件を変えてみてください。
+                        </v-alert>
                     </div>
 
                     <v-btn
@@ -76,7 +88,7 @@
                         elevation="0"
                         class="start-btn font-weight-bold"
                         prepend-icon="mdi-play"
-                        :disabled="chapterOptions.length === 0"
+                        :disabled="selectedLimit === 0"
                     >
                         この条件でクイズを解く
                     </v-btn>
