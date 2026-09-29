@@ -103,10 +103,11 @@ function getChoiceClass(choice: string) {
 
 .question-card {
     border-radius: 16px;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
+    min-height: 100px;
     justify-content: center;
+    .pa-6 {
+        width: 100%;
+    }
 }
 
 .question-text {

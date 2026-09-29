@@ -16,7 +16,7 @@
                 >
                     <v-img
                         :src="quizStore.currentQuestion.image"
-                        contain
+                        cover
                         class="rounded-lg question-image"
                     ></v-img>
                 </div>
@@ -151,9 +151,10 @@ function nextQuestion() {
 .question-card {
     border-radius: 16px;
     min-height: 100px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    .pa-6 {
+        width: 100%;
+    }
 }
 
 .question-text {
@@ -163,11 +164,14 @@ function nextQuestion() {
 .question-image {
     max-height: 200px;
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     border-radius: 12px !important;
     overflow: hidden;
 
     :deep(img) {
         border-radius: 12px !important;
+        object-fit: contain;
     }
 }
 
