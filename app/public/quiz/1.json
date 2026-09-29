@@ -1,95 +1,74 @@
 {
-  "primary": "ekimei-1-easy",
-  "title": "駅名クイズ１",
-  "category": "駅名クイズ",
-  "subject": "駅名クイズかんたん",
-  "level": "easy",
-  "thumbnail": "/images/q1.png",
-  "icon": "mdi-train",
-  "color": "purple-darken-3",
-  "comingSoon": false,
-  "chapters": [
-    {
-      "chapter": 1,
-      "questions": [
+    "primary": "ekimei-1-easy",
+    "title": "駅名クイズ１",
+    "category": "駅名クイズ",
+    "subject": "駅名クイズかんたん",
+    "level": "easy",
+    "thumbnail": "/images/q1.png",
+    "icon": "mdi-train",
+    "color": "purple-darken-3",
+    "comingSoon": false,
+    "chapters": [
         {
-          "id": "1",
-          "quiz_type": "free_input",
-          "image": "/images/q1-1.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "東京駅",
-            "東京"
-          ],
-          "explanation": "写真の駅は東京駅です。"
-        },
-        {
-          "id": "2",
-          "quiz_type": "free_input",
-          "image": "/images/q2.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "武蔵小杉駅",
-            "武蔵小杉"
-          ],
-          "explanation": "写真の駅は武蔵小杉駅です。"
-        },
-        {
-          "id": "3",
-          "quiz_type": "free_input",
-          "image": "/images/q3.png",
-          "question": "写真の駅は?",
-          "accept_answers": [
-            "大船駅",
-            "大船"
-          ],
-          "explanation": "写真の駅は大船駅です。"
-        },
-        {
-          "id": "4",
-          "quiz_type": "free_input",
-          "image": "/images/q4.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "立川駅",
-            "立川"
-          ],
-          "explanation": "写真の駅は立川駅です。"
-        },
-        {
-          "id": "5",
-          "quiz_type": "free_input",
-          "image": "/images/q5.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "空港第2ビル駅",
-            "空港第2ビル"
-          ],
-          "explanation": "写真の駅は空港第2ビル駅です。"
-        },
-        {
-          "id": "6",
-          "quiz_type": "free_input",
-          "image": "/images/q6.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "大宮駅",
-            "大宮"
-          ],
-          "explanation": "写真の駅は大宮駅です。"
-        },
-        {
-          "id": "7",
-          "quiz_type": "free_input",
-          "image": "/images/q7.png",
-          "question": "この駅は?",
-          "accept_answers": [
-            "中野駅",
-            "中野"
-          ],
-          "explanation": "この写真の駅は中野駅です。"
+            "chapter": 1,
+            "questions": [
+                {
+                    "id": "1",
+                    "quiz_type": "free_input",
+                    "image": "/images/q1.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["東京駅", "東京"],
+                    "explanation": "写真の駅は東京駅です。"
+                },
+                {
+                    "id": "2",
+                    "quiz_type": "free_input",
+                    "image": "/images/q2.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["武蔵小杉駅", "武蔵小杉"],
+                    "explanation": "写真の駅は武蔵小杉駅です。"
+                },
+                {
+                    "id": "3",
+                    "quiz_type": "free_input",
+                    "image": "/images/q3.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["大船駅", "大船"],
+                    "explanation": "写真の駅は大船駅です。"
+                },
+                {
+                    "id": "4",
+                    "quiz_type": "free_input",
+                    "image": "/images/q4.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["立川駅", "立川"],
+                    "explanation": "写真の駅は立川駅です。"
+                },
+                {
+                    "id": "5",
+                    "quiz_type": "free_input",
+                    "image": "/images/q5.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["空港第2ビル駅", "空港第2ビル"],
+                    "explanation": "写真の駅は空港第2ビル駅です。"
+                },
+                {
+                    "id": "6",
+                    "quiz_type": "free_input",
+                    "image": "/images/q6.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["大宮駅", "大宮"],
+                    "explanation": "写真の駅は大宮駅です。"
+                },
+                {
+                    "id": "7",
+                    "quiz_type": "free_input",
+                    "image": "/images/q7.png",
+                    "question": "この駅は?",
+                    "accept_answers": ["中野駅", "中野"],
+                    "explanation": "この写真の駅は中野駅です。"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
