@@ -17,7 +17,7 @@ content:
               - primary
       fields:
           - name: primary
-            label: File ID (e.g. tsurumi-easy)
+            label: File ID
             type: string
             required: true
           - name: title
