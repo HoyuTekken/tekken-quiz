@@ -372,7 +372,7 @@
         {
           "id": "30",
           "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC04459.jpg",
           "question": "海芝浦支線の終点となる駅の名前を答えなさい。",
           "accept_answers": [
             "海芝浦",
@@ -383,7 +383,7 @@
         {
           "id": "31",
           "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC08474.jpg",
           "question": "鶴見線の車両の夜間滞泊を行っている駅の一つで、鶴見駅以外の駅の名前を答えなさい。",
           "accept_answers": [
             "弁天橋",
@@ -394,7 +394,7 @@
         {
           "id": "32",
           "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC04459.jpg",
           "question": "海芝浦駅にある東芝の事業所の名前を答えなさい。",
           "accept_answers": [
             "東芝京浜事業所",
@@ -405,7 +405,7 @@
         {
           "id": "33",
           "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC08474.jpg",
           "question": "1996年3月のダイヤ改正で大川支線の車両を置き換えた形式の番号を答えなさい。",
           "accept_answers": [
             "103系",
@@ -416,7 +416,7 @@
         {
           "id": "34",
           "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC06543.jpg",
           "question": "鶴見線の全列車で行われている、車内で運賃の収受を行わないワンマン運転の方式を何ワンマンと呼ぶでしょう？",
           "accept_answers": [
             "都市型ワンマン",
@@ -426,19 +426,8 @@
         },
         {
           "id": "35",
-          "quiz_type": "free_input",
-          "image": "/images/tsurumi-line.jpg",
-          "question": "南武線・尻手駅と浜川崎駅間の専用車両の出入りのため、弁天橋駅と尻手駅間に設定されている列車の名前を答えなさい。",
-          "accept_answers": [
-            "回送列車",
-            "回送"
-          ],
-          "explanation": "弁天橋駅 - 尻手駅間には回送列車が設定されています。"
-        },
-        {
-          "id": "36",
           "quiz_type": "four_choice",
-          "image": "/images/tsurumi-line.jpg",
+          "image": "/images/DSC08523.jpg",
           "question": "鶴見線で2026年現在使われている車両はこの中でどれか",
           "choices": [
             "E233系",
