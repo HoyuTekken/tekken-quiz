@@ -1,86 +1,89 @@
 media:
-    input: app/public/images
-    output: /images
-    extensions: [png, jpg, jpeg, webp]
+  input: app/public/images
+  output: /images
+  extensions:
+    - png
+    - jpg
+    - jpeg
+    - webp
 
 content:
-    - name: quiz_files
-      label: Quiz Files
-      type: collection
-      path: app/public/quiz
-      format: json
-      filename:
-          template: "{slug}.json"
-      view:
-          fields:
-              - title
-              - category
-              - primary
+  - name: quiz_files
+    label: Quiz Files
+    type: collection
+    path: app/public/quiz
+    format: json
+    filename: "{slug}.json"
+    view:
       fields:
-          - name: slug
-            label: filename
-            type: string
-            required: true
-          - name: title
-            label: Quiz Title
-            type: string
-          - name: category
-            label: Category
-            type: string
-          - name: subject
-            label: Subject
-            type: string
-          - name: level
-            label: Level (easy, normal, hard)
-            type: string
-          - name: thumbnail
-            label: Thumbnail Image
-            type: image
-          - name: icon
-            label: Icon (e.g. mdi-train)
-            type: string
-          - name: color
-            label: Color (e.g. yellow-darken-3)
-            type: string
-          - name: comingSoon
-            label: Coming Soon
-            type: boolean
-          - name: chapters
-            label: Chapters
+        - title
+        - category
+        - slug
+    fields:
+      - name: slug
+        label: filename
+        type: string
+        required: true
+      - name: title
+        label: Quiz Title
+        type: string
+      - name: category
+        label: Category
+        type: string
+      - name: subject
+        label: Subject
+        type: string
+      - name: level
+        label: Level (easy, normal, hard)
+        type: string
+      - name: thumbnail
+        label: Thumbnail Image
+        type: image
+      - name: icon
+        label: Icon (e.g. mdi-train)
+        type: string
+      - name: color
+        label: Color (e.g. yellow-darken-3)
+        type: string
+      - name: comingSoon
+        label: Coming Soon
+        type: boolean
+      - name: chapters
+        label: Chapters
+        type: object
+        list: true
+        fields:
+          - name: chapter
+            label: Chapter number
+            type: number
+          - name: questions
+            label: Questions
             type: object
             list: true
             fields:
-                - name: chapter
-                  label: Chapter number
-                  type: number
-                - name: questions
-                  label: Questions
-                  type: object
-                  list: true
-                  fields:
-                      - name: id
-                        label: ID　(For Both Types)
-                        type: string
-                      - name: quiz_type
-                        label: Quiz Type (four_choice or free_input only)
-                        type: string
-                      - name: image
-                        label: Question Image (For Both Types)
-                        type: image
-                      - name: question
-                        label: Question Text (For Both Types)
-                        type: string
-                      - name: choices
-                        label: Choices (for 4-choice)
-                        type: string
-                        list: true
-                      - name: answer
-                        label: Answer (for 4-choice)
-                        type: string
-                      - name: accept_answers
-                        label: Accept Answers (for free input)
-                        type: string
-                        list: true
-                      - name: explanation
-                        label: Explanation (For Both Types)
-                        type: string
+              - name: id
+                label: ID (For Both Types)
+                type: string
+              - name: quiz_type
+                label: Quiz Type (four_choice or free_input only)
+                type: string
+              - name: image
+                label: Question Image (For Both Types)
+                type: string
+              - name: question
+                label: Question Text (For Both Types)
+                type: string
+              - name: choices
+                label: Choices (for 4-choice)
+                type: string
+                list: true
+              - name: answer
+                label: Answer (for 4-choice)
+                type: string
+              - name: accept_answers
+                label: Accept Answers (for free input)
+                type: string
+                list: true
+              - name: explanation
+                label: Explanation (For Both Types)
+                type: string
