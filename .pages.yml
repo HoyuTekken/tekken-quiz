@@ -9,15 +9,16 @@ content:
       type: collection
       path: app/public/quiz
       format: json
-      filename: "{primary}.json"
+      filename:
+          template: "{slug}.json"
       view:
           fields:
               - title
               - category
               - primary
       fields:
-          - name: primary
-            label: File ID
+          - name: slug
+            label: filename
             type: string
             required: true
           - name: title
