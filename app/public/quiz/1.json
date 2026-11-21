@@ -17,7 +17,7 @@
                     "quiz_type": "free_input",
                     "image": "/images/q1.png",
                     "question": "この駅は?",
-                    "accept_answers": ["東京駅", "東京"],
+                    "accept_answers": ["東京駅", "東京", "とうきょう"],
                     "explanation": "写真の駅は東京駅です。"
                 },
                 {
@@ -25,7 +25,11 @@
                     "quiz_type": "free_input",
                     "image": "/images/q2.png",
                     "question": "この駅は?",
-                    "accept_answers": ["武蔵小杉駅", "武蔵小杉"],
+                    "accept_answers": [
+                        "武蔵小杉駅",
+                        "武蔵小杉",
+                        "むさしこすぎ"
+                    ],
                     "explanation": "写真の駅は武蔵小杉駅です。"
                 },
                 {
@@ -33,7 +37,7 @@
                     "quiz_type": "free_input",
                     "image": "/images/q3.png",
                     "question": "この駅は?",
-                    "accept_answers": ["大船駅", "大船"],
+                    "accept_answers": ["大船駅", "大船", "おおふな"],
                     "explanation": "写真の駅は大船駅です。"
                 },
                 {
@@ -41,7 +45,7 @@
                     "quiz_type": "free_input",
                     "image": "/images/q4.png",
                     "question": "この駅は?",
-                    "accept_answers": ["立川駅", "立川"],
+                    "accept_answers": ["立川駅", "立川", "たちかわ"],
                     "explanation": "写真の駅は立川駅です。"
                 },
                 {
@@ -49,7 +53,11 @@
                     "quiz_type": "free_input",
                     "image": "/images/q5.png",
                     "question": "この駅は?",
-                    "accept_answers": ["空港第2ビル駅", "空港第2ビル"],
+                    "accept_answers": [
+                        "空港第2ビル駅",
+                        "空港第2ビル",
+                        "くうこうだい2びる"
+                    ],
                     "explanation": "写真の駅は空港第2ビル駅です。"
                 },
                 {
@@ -57,7 +65,7 @@
                     "quiz_type": "free_input",
                     "image": "/images/q6.png",
                     "question": "この駅は?",
-                    "accept_answers": ["大宮駅", "大宮"],
+                    "accept_answers": ["大宮駅", "大宮", "おおみや"],
                     "explanation": "写真の駅は大宮駅です。"
                 },
                 {
@@ -65,7 +73,7 @@
                     "quiz_type": "free_input",
                     "image": "/images/q7.png",
                     "question": "この駅は?",
-                    "accept_answers": ["中野駅", "中野"],
+                    "accept_answers": ["中野駅", "中野", "なかの"],
                     "explanation": "この写真の駅は中野駅です。"
                 }
             ]
